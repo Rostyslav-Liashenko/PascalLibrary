@@ -6,8 +6,7 @@ type
 			next:ItemPtr;
 		   end;
 var 
-	tmp,Head:itemPtr;
-	n:integer;
+	Head:itemPtr;
 	countNode:word;
 
 
@@ -65,16 +64,35 @@ begin
 
 end;
 
-
+procedure DeleteNode(Head:itemPtr; var CountNode:word);
+var 
+	DelTmp,tmp:itemPtr;
+	poz,i:word;
+begin
+	DelTmp:=Head;
+	Writeln('Input the position node for delete: ');
+	read(poz);
+	for i:=1 to poz - 1 do
+	begin
+		tmp:=delTmp;
+		delTmp:=delTmp^.next;
+	end;
+	tmp^.next:=delTmp^.next;
+	dispose(delTmp);
+	
+end;
 
 begin
 	Head:=nil;
 	countNode:=1;
 	AddNode(Head,CountNode);
-	Writeln('Count node = ',countNode);
 	Writeln('==list==');
 	ShowList(Head);
 	Writeln('==Insertion Node in list==');
 	InsertionNode(Head,CountNode);
 	ShowList(Head);
+	Writeln('==Delete Node in list==');
+	DeleteNode(Head,CountNode);
+	ShowList(Head);
+
 end.
