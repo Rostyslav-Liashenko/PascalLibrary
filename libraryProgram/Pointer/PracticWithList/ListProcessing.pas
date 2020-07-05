@@ -10,6 +10,23 @@ var
 	n:integer;
 	countNode:word;
 
+
+procedure AddNode(var Head:itemPtr; var  countNode:word);
+var
+       	tmp:itemPtr;
+	n:integer;
+begin
+	while not SeekEOf do
+	begin
+		read(n);
+		new(tmp);
+		tmp^.data:=n;
+		tmp^.next:=Head;
+		Head:=tmp;
+		CountNode:=CountNode + 1;
+	end;
+end;
+
 procedure ShowList(Head:ItemPtr);
 var tmp:ItemPtr;
 begin
@@ -49,18 +66,11 @@ begin
 end;
 
 
+
 begin
 	Head:=nil;
 	countNode:=1;
-	while not SeekEOF do
-	begin
-		read(n);
-		new(tmp);
-		tmp^.data:=n;
-		tmp^.next:=Head;
-		Head:=tmp;
-		countNode:=countNode + 1;
-	end;
+	AddNode(Head,CountNode);
 	Writeln('Count node = ',countNode);
 	Writeln('==list==');
 	ShowList(Head);
