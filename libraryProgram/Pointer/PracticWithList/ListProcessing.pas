@@ -1,4 +1,4 @@
-Program CreateAndShowList;
+Program ListProcessing;
 type 
 	ItemPtr = ^item;
 	item = record
@@ -50,6 +50,7 @@ begin
 	tmp:=Head;
 	Writeln('Input the position in list for insert:');
 	Readln(poz);
+	poz:=poz - 1;
 	Writeln('Input the number for insert: ');
 	Readln(num);
 	for i:=1 to poz - 1 do
@@ -64,14 +65,22 @@ begin
 
 end;
 
-procedure DeleteNode(Head:itemPtr; var CountNode:word);
+procedure DeleteNode(var Head:itemPtr; var CountNode:word);
 var 
 	DelTmp,tmp:itemPtr;
 	poz,i:word;
 begin
 	DelTmp:=Head;
+	tmp:=Head;
 	Writeln('Input the position node for delete: ');
 	read(poz);
+	if poz = 1 then
+	begin
+		tmp:=Head^.next;
+		dispose(Head);
+		Head:=tmp;
+		exit;
+	end;
 	for i:=1 to poz - 1 do
 	begin
 		tmp:=delTmp;
@@ -79,6 +88,7 @@ begin
 	end;
 	tmp^.next:=delTmp^.next;
 	dispose(delTmp);
+	Countnode:=CountNode-1;
 	
 end;
 
