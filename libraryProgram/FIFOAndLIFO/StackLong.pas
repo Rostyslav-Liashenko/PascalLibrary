@@ -19,7 +19,7 @@ var
 	tmp:LongItemPtr;
 begin
 	new(tmp);
-	tmp^.data :=n;
+	tmp^.data:=n;
 	tmp^.next:=stack;
 	stack:=tmp;
 end;
@@ -45,6 +45,22 @@ begin
 	SOLIsEmpty:=stack = nil;
 end;
 
-begin
+var
+	s:stackOfLongints;
+	n:longint;
 
+begin
+	Writeln('Init stack');
+	SOLInit(s);
+	while not eof do
+	begin
+		readln(n);
+		SOLPush(s,n);
+	end;
+	Writeln('Pop stack');
+	while not SOLIsEmpty(s) do
+	begin
+		SOLPop(s,n);
+		writeln(n);
+	end;
 end.
