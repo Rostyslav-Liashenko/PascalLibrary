@@ -7,6 +7,7 @@ begin
 		PrintOfDigitsOfNumber(n div 10);
 		write(n mod 10,' ')
 	end;
+	Writeln;
 end;
 
 begin
