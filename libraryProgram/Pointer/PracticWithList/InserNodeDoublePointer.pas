@@ -7,7 +7,7 @@ type
 		end;
 var
 	first,tmp:itemptr;
-	n:integer;
+	n,i,poz:integer;
 	doublePointer:^itemptr;
 begin
 	first:=nil;
@@ -26,18 +26,21 @@ begin
 		tmp:=tmp^.next;
 	end;
 	Writeln;
+	{insert one node in list}
+	Write('input the number for insert:  ');
+	Readln(n);
+	write('input the pozition for insert: ');
+	Readln(poz);
 	doublePointer:=@first;
-	while doublePointer^ <> nil do
+	for i:=1 to poz do
 	begin
-		if doublePointer^^.data < 0 then
-		begin
-			tmp:=doublePointer^;
-			doublePointer^:=doublePointer^^.next;
-			dispose(tmp);
-		end
-		else
-			doublePointer:=@(doublePointer^^.next);
+		doublePointer:=@(doublePointer^^.next);
 	end;
+	new(tmp);
+	tmp^.data:=n;
+	tmp^.next:=doublePointer^;
+	doublePointer^:=tmp;
+	{print list}
 	doublePointer:=@first;
 	while doublePointer^ <> nil do
 	begin

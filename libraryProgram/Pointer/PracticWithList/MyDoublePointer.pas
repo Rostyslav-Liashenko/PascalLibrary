@@ -45,4 +45,21 @@ begin
 		tmp:=tmp^.next;
 	end;
 	Writeln;
+	{insert node in list with double pointer}
+
+	{new(tmp)
+	 tmp^.next:=pp^;
+	 tmp^.data:=n;
+	 pp^.data:=tmp;
+	}
+	{insertion node in sort list with double pointer}
+	 {
+	  pp:=@first;
+	  while (pp^ <> nil) and (pp^^.data < n) do
+		 	pp:=@(pp^.next);
+	  new(tmp);
+	  tmp^.data:=n;
+	  tmp^.next:=pp^;
+	  pp^:=tmp;
+	 }
 end.
