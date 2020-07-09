@@ -10,6 +10,6 @@ begin
 end;
 
 begin
-	rec_printf_char('#',2);
+	rec_printf_char('#',5);
 	writeln;
 end.
