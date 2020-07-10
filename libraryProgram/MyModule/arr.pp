@@ -11,7 +11,7 @@ function MaxElementArray(a:MyArray):integer;
 procedure ShowArray(a:MyArray);
 
 implementation
-
+Uses crt;
 function summaArray(a:MyArray):integer;
 Var
 	total:integer;
@@ -35,6 +35,7 @@ begin
 			max:=a[i];
 	end;
 	MaxElementArray:=max;
+	TextColor(red);
 end;
 
 procedure ShowArray(a:MyArray);
