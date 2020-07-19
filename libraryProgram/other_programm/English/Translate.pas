@@ -1,79 +1,95 @@
 Program Translate;
 
-function CountVariant:word;
+
+function CountVariant(var nameSource:string):word;
 var
-       	ukr:text;
+       	source:text;
 	count:word;
 	s:string[1];
 begin
 	count:=0;
-	assign(ukr,'ukr.txt');
-	reset(ukr);
-	while not eof(ukr) do
+	assign(source,nameSource);
+	reset(source);
+	while not seekeof(source) do
 	begin
-		readln(ukr,s);
+		readln(source,s);
 		count:=count+1;
 	end;
 	CountVariant:=count;
 end;
 
-
-function CreateUkraineWord(var RandomWord:integer; countRandomWord:word):string;
-var
-        ukr:text;	
-	s:string;
-	i:integer;
-begin
-	assign(ukr,'ukr.txt');
-	reset(ukr);
-	RandomWord:=Random(countVariant)+1;
-	for i:=1 to RandomWord do
-		Readln(ukr,s);
-	close(ukr);
-	CreateUkraineWord:=s;
-end;
-
-function CreateEnglishWord(var TranslateUkraine:integer):string;
-var
-	s:string;
-	i:integer;
-	eng:text;
-begin
-	assign(eng,'eng.txt');
-	reset(eng);
-	for i:=1 to TranslateUkraine do
-		Readln(eng,s);
-	close(eng);
-	CreateEnglishWord:=s;
-end;
-
-var
-    RandomWord:integer;
-    UkraineWord:string;
-    UserEnglishWord:string;
-    scoore:integer;
-    countRandomWord:integer;
+function RandomIndexWord(countWord:integer):integer;
 begin
 	Randomize;
-	scoore:=0;
-	countRandomWord:=CountVariant;
-	Writeln('input the end for end programm');
-	while true  do
+	RandomIndexWord:=Random(CountWord) + 1;
+end;
+
+procedure CreateWord( var nameSource:string; var outEnglish:string; var outUkraine:string; countWord:integer);
+var
+	source:text;
+	i:integer;
+	s:string;
+	indexWord:integer;
+begin
+	outEnglish:='';
+	outUkraine:='';
+	assign(source,nameSource);
+	reset(source);
+	indexWord:=RandomIndexWord(countWord);
+	for i:=1 to indexWord do
 	begin
-		UkraineWord:=CreateUkraineWord(RandomWord, countRandomWord);
-		Writeln('Input translate ',UkraineWord,' word: ');
-		Readln(UserEnglishWord);
-		if UserEnglishWord = 'end' then
-			break;
-		if UserEnglishWord = CreateEnglishWord(RandomWord) then
+		readln(source,s);
+	end;
+	for i:=1 to Length(s) do
+	begin
+		if s[i] = '=' then
 		begin
-			Writeln('Correct!!');
-			inc(scoore);
+			break;
 		end
 		else
 		begin
-			Writeln('wrong!!');	
+			outEnglish:=outEnglish + s[i];
 		end;
 	end;
-	Writeln('Your scoore = ', scoore);
+	delete(outEnglish,Length(outEnglish),1);
+	outUkraine:=copy(s,Length(outEnglish)+4,255);
+	close(source);
+end;
+
+var
+     countWord:word;
+    nameFile:string;
+    outEnglish,outUkraine:string;
+    UserWord:string;
+    scoore:integer;
+begin
+	scoore:=0;
+	outEnglish:='';
+	outUkraine:='';
+	Writeln('Input the name file:');
+	Readln(nameFile);
+	countWord:=countVariant(nameFile);
+	Writeln('All word = ', countWord);
+	while true do
+	begin
+
+		CreateWord(nameFile,outEnglish,outUkraine,countWord);
+		Writeln('Translate ', outUkraine,' :');
+		Readln(UserWord);
+		if UserWord = 'end' then
+		begin
+			break;
+		end;
+		if userWord = outEnglish then
+		begin
+			Writeln('Right!!!');
+			scoore:=scoore + 1;
+		end
+		else
+		begin
+			Writeln('Wrong!!!');
+		end;
+		Writeln;
+	end;
+	Writeln('scoore = ', scoore);
 end.
