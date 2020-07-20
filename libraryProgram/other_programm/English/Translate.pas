@@ -45,13 +45,12 @@ var
 	isFound:boolean;
 begin
 	Randomize;
-	inc(countElementArray);
 	isFound:=true;
 	while isFound do
 	begin
 		outIndexWord:=Random(CountWord) + 1;
 		Writeln('outIndexWord = ', outIndexWord);
-		for i:=1 to CountMaxWord do
+		for i:=1 to CountWord do
 		begin
 			if outIndexWord = ArrayUselessNumber[i] then
 			begin
@@ -62,8 +61,14 @@ begin
 			begin
 				isFound:=false;
 			end;
+			if countElementArray = CountWord then
+			begin
+				isEnd:=true;
+				exit;		
+			end;
 		end;
 	end;
+	inc(countElementArray);
 	ArrayUselessNumber[countElementArray]:=outIndexWord;
 	RandomIndexWord:=outIndexWord;	
 end;
@@ -130,7 +135,7 @@ begin
 		CreateWord(nameFile,outEnglish,outUkraine,countWord);
 		Writeln('Translate ', outUkraine,' :');
 		Readln(UserWord);
-		if (UserWord = 'end') then
+		if (UserWord = 'end') or isEnd then
 		begin
 			break;
 		end;
@@ -146,5 +151,6 @@ begin
 		end;
 		Writeln;
 	end;
+
 	Writeln('scoore = ', scoore);
 end.
