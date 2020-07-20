@@ -13,7 +13,7 @@ var
 	isEnd:boolean;
 	CountElementArray:integer;
 
-function CheckFile(nameFile:string):boolean;
+function CheckFile(nameFile:string):boolean; {check file}
 var f:file;
 begin
 	{$I-}
@@ -26,7 +26,7 @@ begin
 		CheckFile:=false;
 end;
 
-function CountVariant(var nameSource:string):word;
+function CountVariant(var nameSource:string):word; {count all string in file}
 var
        	source:text;
 	count:word;
@@ -78,8 +78,8 @@ begin
 	RandomIndexWord:=outIndexWord;	
 end;
 
-procedure CreateWord( var nameSource:string; var outEnglish:string; var outUkraine:string; countWord:integer);
-var
+procedure CreateWord( var nameSource:string; var outEnglish:string; var outUkraine:string; countWord:integer); {Create random}
+var													       {English and Ukraine word}
 	source:text;
 	i:integer;
 	s:string;
@@ -121,23 +121,23 @@ begin
 	Writeln('Input the name file:');
 	Readln(nameFile);
 
-	if not CheckFile(nameFile) then
+	if not CheckFile(nameFile) then {if file not found}
 	begin
 		Writeln('Wrong name file!!!');
 		Writeln('Please input the correct file!!!');
-		halt(1)
+		halt(1) {exit programm}
 	end;
 
-	countWord:=countVariant(nameFile);
+	countWord:=countVariant(nameFile); {count all word, how ready to translate}
 	Writeln('All word = ', countWord);
 
 	while true do
 	begin
 
-		CreateWord(nameFile,outEnglish,outUkraine,countWord);
-		Writeln('Translate ', outUkraine,' :');
+		CreateWord(nameFile,outEnglish,outUkraine,countWord); {Create Ukraine and English word for translate}
+		Writeln('Translate ', outUkraine,' :'); 
 		Readln(UserWord);
-		if (UserWord = 'end') or isEnd then
+		if (UserWord = 'end') or isEnd then {if word is ended then programm is over or user print "end"}
 		begin
 			break;
 		end;
