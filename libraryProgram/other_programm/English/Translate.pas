@@ -1,5 +1,17 @@
 Program Translate;
 
+function CheckFile(nameFile:string):boolean;
+var f:file;
+begin
+	{$I-}
+	assign(f,nameFile);
+	reset(f);
+	{$I+}
+	if IOResult = 0 then
+		CheckFile:=true
+	else
+		CheckFile:=false;
+end;
 
 function CountVariant(var nameSource:string):word;
 var
@@ -66,8 +78,16 @@ begin
 	scoore:=0;
 	outEnglish:='';
 	outUkraine:='';
+
 	Writeln('Input the name file:');
 	Readln(nameFile);
+	if not CheckFile(nameFile) then
+	begin
+		Writeln('Wrong name file!!!');
+		Writeln('Please input the correct file!!!');
+		halt(1)
+	end;
+
 	countWord:=countVariant(nameFile);
 	Writeln('All word = ', countWord);
 	while true do
@@ -88,6 +108,7 @@ begin
 		else
 		begin
 			Writeln('Wrong!!!');
+			Writeln('it is ', outEnglish);
 		end;
 		Writeln;
 	end;
