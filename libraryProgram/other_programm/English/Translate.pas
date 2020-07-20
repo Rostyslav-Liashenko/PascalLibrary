@@ -4,8 +4,13 @@ Const
 type
 	number = array[1..CountMaxWord] of integer;
 var
+    	countWord:word; 
+    	nameFile:string;
+    	outEnglish,outUkraine:string;
+    	UserWord:string;
+    	scoore:integer;
 	UselessNumber:number; {array for write repeat number}
-	isEnd:boolean; 
+	isEnd:boolean;
 	CountElementArray:integer;
 
 function CheckFile(nameFile:string):boolean;
@@ -46,11 +51,12 @@ var
 begin
 	Randomize;
 	isFound:=true;
+	inc(countElementArray);
 	while isFound do
 	begin
 		outIndexWord:=Random(CountWord) + 1;
 		Writeln('outIndexWord = ', outIndexWord);
-		for i:=1 to CountWord do
+		for i:=1 to countElementArray do
 		begin
 			if outIndexWord = ArrayUselessNumber[i] then
 			begin
@@ -68,7 +74,6 @@ begin
 			end;
 		end;
 	end;
-	inc(countElementArray);
 	ArrayUselessNumber[countElementArray]:=outIndexWord;
 	RandomIndexWord:=outIndexWord;	
 end;
@@ -105,12 +110,7 @@ begin
 	close(source);
 end;
 
-var
-     countWord:word;
-    nameFile:string;
-    outEnglish,outUkraine:string;
-    UserWord:string;
-    scoore:integer;
+
 begin
 	countElementArray:=0;
 	isEnd:=false;
@@ -120,6 +120,7 @@ begin
 
 	Writeln('Input the name file:');
 	Readln(nameFile);
+
 	if not CheckFile(nameFile) then
 	begin
 		Writeln('Wrong name file!!!');
@@ -129,6 +130,7 @@ begin
 
 	countWord:=countVariant(nameFile);
 	Writeln('All word = ', countWord);
+
 	while true do
 	begin
 
