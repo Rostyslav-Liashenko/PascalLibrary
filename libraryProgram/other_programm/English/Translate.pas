@@ -1,4 +1,12 @@
 Program Translate;
+Const
+	CountMaxWord = 40;
+type
+	number = array[1..CountMaxWord] of integer;
+var
+	UselessNumber:number; {array for write repeat number}
+	isEnd:boolean; 
+	CountElementArray:integer;
 
 function CheckFile(nameFile:string):boolean;
 var f:file;
@@ -30,10 +38,34 @@ begin
 	CountVariant:=count;
 end;
 
-function RandomIndexWord(countWord:integer):integer;
+function RandomIndexWord(countWord:integer; var ArrayUselessNumber:number; var isEnd:boolean; var countElementArray:integer):integer;
+var 
+	i:integer;
+	outIndexWord:integer;
+	isFound:boolean;
 begin
 	Randomize;
-	RandomIndexWord:=Random(CountWord) + 1;
+	inc(countElementArray);
+	isFound:=true;
+	while isFound do
+	begin
+		outIndexWord:=Random(CountWord) + 1;
+		Writeln('outIndexWord = ', outIndexWord);
+		for i:=1 to CountMaxWord do
+		begin
+			if outIndexWord = ArrayUselessNumber[i] then
+			begin
+				isFound:=true;
+				break;
+			end
+			else
+			begin
+				isFound:=false;
+			end;
+		end;
+	end;
+	ArrayUselessNumber[countElementArray]:=outIndexWord;
+	RandomIndexWord:=outIndexWord;	
 end;
 
 procedure CreateWord( var nameSource:string; var outEnglish:string; var outUkraine:string; countWord:integer);
@@ -47,7 +79,7 @@ begin
 	outUkraine:='';
 	assign(source,nameSource);
 	reset(source);
-	indexWord:=RandomIndexWord(countWord);
+	indexWord:=RandomIndexWord(countWord,UselessNumber, isEnd, countElementArray);
 	for i:=1 to indexWord do
 	begin
 		readln(source,s);
@@ -75,6 +107,8 @@ var
     UserWord:string;
     scoore:integer;
 begin
+	countElementArray:=0;
+	isEnd:=false;
 	scoore:=0;
 	outEnglish:='';
 	outUkraine:='';
@@ -96,7 +130,7 @@ begin
 		CreateWord(nameFile,outEnglish,outUkraine,countWord);
 		Writeln('Translate ', outUkraine,' :');
 		Readln(UserWord);
-		if UserWord = 'end' then
+		if (UserWord = 'end') then
 		begin
 			break;
 		end;
