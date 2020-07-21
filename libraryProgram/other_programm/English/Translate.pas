@@ -63,7 +63,8 @@ begin
 end;
 
 function RandomIndexWord(countWord:integer; var ArrayUselessNumber:number; var isEnd:boolean; var countElementArray:integer):integer;
-var 
+{generate random not repeat number for Translate }
+var 	
 	outIndexWord:integer;
 begin
 	while true do
@@ -129,14 +130,14 @@ begin
 	Writeln('Input the name file:');
 	Readln(nameFile);
 
-	if not CheckFile(nameFile) then
+	if not CheckFile(nameFile) then {if file not found}
 	begin
 		Writeln('Wrong name file!!!');
 		Writeln('Please input the correct file!!!');
-		halt(1) 
+		halt(1) {exit programm and send exit code 1}
 	end;
 	
-	countWord:=countVariant(nameFile); 
+	countWord:=countVariant(nameFile); {count all word, how ready to traslate}
 	Writeln('All word = ', countWord);
 
 	while true do
