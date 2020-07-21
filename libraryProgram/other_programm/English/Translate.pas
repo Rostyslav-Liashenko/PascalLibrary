@@ -8,7 +8,7 @@ var
     	nameFile:string;
     	outEnglish,outUkraine:string;
     	UserWord:string;
-    	scoore:integer;
+    	scoore,fail:integer;
 	UselessNumber:number; {array for write repeat number}
 	isEnd:boolean;
 	CountElementArray:integer;
@@ -37,45 +37,51 @@ begin
 	reset(source);
 	while not seekeof(source) do
 	begin
+		
 		readln(source,s);
 		count:=count+1;
 	end;
 	CountVariant:=count;
 end;
 
+function CheckNumberLocateArray(var ArrayUselessNumber:number; num:integer; countElementArray:integer):boolean;
+var
+	i:integer;
+	isTmpFind:boolean;
+begin
+	for i:=1 to countElementArray do
+	begin
+		if num = ArrayUselessNumber[i] then
+		begin
+			isTmpFind:=true;
+			break;
+		end
+		else
+			isTmpFind:=false;
+	end;
+	CheckNumberLocateArray:=isTmpFind;
+end;
+
 function RandomIndexWord(countWord:integer; var ArrayUselessNumber:number; var isEnd:boolean; var countElementArray:integer):integer;
 var 
-	i:integer;
 	outIndexWord:integer;
-	isFound:boolean;
 begin
-	Randomize;
-	isFound:=true;
-	inc(countElementArray);
-	while isFound do
+	while true do
 	begin
-		outIndexWord:=Random(CountWord) + 1;
-		Writeln('outIndexWord = ', outIndexWord);
-		for i:=1 to countElementArray do
+		if countElementArray = countWord then
 		begin
-			if outIndexWord = ArrayUselessNumber[i] then
-			begin
-				isFound:=true;
-				break;
-			end
-			else
-			begin
-				isFound:=false;
-			end;
-			if countElementArray = CountWord then
-			begin
-				isEnd:=true;
-				exit;		
-			end;
+			isEnd:=true;
+			break;
 		end;
-	end;
-	ArrayUselessNumber[countElementArray]:=outIndexWord;
-	RandomIndexWord:=outIndexWord;	
+		outIndexWord:=Random(CountWord) + 1;
+		if not CheckNumberLocateArray(ArrayUselessNumber, outIndexWord, countElementArray) then
+		begin
+			inc(CountElementArray);
+			ArrayUselessNumber[countElementArray]:=outIndexWord;
+			RandomIndexWord:=outIndexWord;
+			break;
+		end;
+	end;	
 end;
 
 procedure CreateWord( var nameSource:string; var outEnglish:string; var outUkraine:string; countWord:integer); {Create random}
@@ -112,32 +118,34 @@ end;
 
 
 begin
+
 	countElementArray:=0;
 	isEnd:=false;
 	scoore:=0;
+	fail:=0;
 	outEnglish:='';
 	outUkraine:='';
 
 	Writeln('Input the name file:');
 	Readln(nameFile);
 
-	if not CheckFile(nameFile) then {if file not found}
+	if not CheckFile(nameFile) then
 	begin
 		Writeln('Wrong name file!!!');
 		Writeln('Please input the correct file!!!');
-		halt(1) {exit programm}
+		halt(1) 
 	end;
-
-	countWord:=countVariant(nameFile); {count all word, how ready to translate}
+	
+	countWord:=countVariant(nameFile); 
 	Writeln('All word = ', countWord);
 
 	while true do
 	begin
 
-		CreateWord(nameFile,outEnglish,outUkraine,countWord); {Create Ukraine and English word for translate}
+		CreateWord(nameFile,outEnglish,outUkraine,countWord); 
 		Writeln('Translate ', outUkraine,' :'); 
 		Readln(UserWord);
-		if (UserWord = 'end') or isEnd then {if word is ended then programm is over or user print "end"}
+		if (UserWord = 'end') or isEnd then
 		begin
 			break;
 		end;
@@ -150,9 +158,12 @@ begin
 		begin
 			Writeln('Wrong!!!');
 			Writeln('it is ', outEnglish);
+			fail:=fail+1;
 		end;
 		Writeln;
 	end;
 
 	Writeln('scoore = ', scoore);
+	Writeln('fail = ', fail);
+	
 end.

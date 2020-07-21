@@ -1,0 +1,24 @@
+couple = пара (одружених)
+partner = партнер
+engaged = заручений
+fiance = наречений
+fiancee = наречена
+flatmate = друзяка по квартирі
+colleague = колега
+ex = бивша/бивший
+close Freind = близький друг
+classmate = шкільний друг
+be together = бути разом
+become friend = подружитися
+break up = розлучатися
+get in touch = відновити зв'язок
+get married = одружитися
+get to know = дізнаватися швидко
+go out together = йти кудись разом
+have sth in common = мати щось спільне
+lose touch = втратити зв'зок
+meet = зустрічатися
+propose = освідчуватися
+dump = відшити
+fall out with = завершити дружбу
+
