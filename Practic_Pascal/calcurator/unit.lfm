@@ -1,0 +1,74 @@
+object Form1: TForm1
+  Left = 647
+  Height = 258
+  Top = 238
+  Width = 367
+  Caption = 'Calcurator'
+  ClientHeight = 258
+  ClientWidth = 367
+  Constraints.MaxHeight = 258
+  Constraints.MaxWidth = 367
+  LCLVersion = '2.0.6.0'
+  object Button1: TButton
+    Left = 168
+    Height = 32
+    Top = 72
+    Width = 32
+    Caption = '*'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 214
+    Height = 32
+    Top = 72
+    Width = 32
+    Caption = '-'
+    OnClick = Button2Click
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 262
+    Height = 32
+    Top = 72
+    Width = 32
+    Caption = '+'
+    OnClick = Button3Click
+    TabOrder = 2
+  end
+  object Button4: TButton
+    Left = 310
+    Height = 32
+    Top = 72
+    Width = 32
+    Caption = '/'
+    OnClick = Button4Click
+    TabOrder = 3
+  end
+  object Edit1: TEdit
+    Left = 49
+    Height = 36
+    Top = 41
+    Width = 82
+    AutoSize = False
+    TabOrder = 4
+  end
+  object Edit2: TEdit
+    Left = 51
+    Height = 36
+    Top = 107
+    Width = 81
+    AutoSize = False
+    TabOrder = 5
+  end
+  object Label1: TLabel
+    Left = 83
+    Height = 40
+    Top = 184
+    Width = 205
+    Anchors = []
+    AutoSize = False
+    Caption = '...'
+    ParentColor = False
+  end
+end
