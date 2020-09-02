@@ -111,10 +111,10 @@ begin
             Label6.Caption:='Fill the all input'
          else
          begin
+              Label4.Font.Color:=clWindowFrame;
+              Label5.Font.Color:=clRed;
               CalculateEquation1;
               Label7.Caption:='';
-              Edit2.Text:='';
-              Edit3.Text:='';
          end;
     end
     else
@@ -126,6 +126,8 @@ begin
              Label6.Caption:='';
              Edit2.Text:='';
              Edit3.Text:='';
+             Label4.Font.Color:=clRed;
+             Label5.Font.Color:=clWindowFrame;
              CalculateEquation2;
          end;
     end;
