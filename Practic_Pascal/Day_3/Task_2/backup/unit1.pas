@@ -5,7 +5,7 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
 
 type
 
@@ -16,6 +16,7 @@ type
     Edit1: TEdit;
     Edit2: TEdit;
     Edit3: TEdit;
+    Image1: TImage;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -41,9 +42,8 @@ procedure TForm1.Button1Click(Sender: TObject);
 Var
   day,month,year: integer;
   maxDay:integer;
-  Code:integer;
 begin
-     day := val(Edit1.Text,day,Code) + 1;
+     day := StrToInt(Edit1.Text) + 1;
      month := StrToInt(Edit2.Text);
      year := StrToInt(Edit3.Text);
      if (month = 2) then
@@ -65,6 +65,7 @@ begin
                month:=1;
           end;
      end;
+     Label5.Font.Color:=clHighlight;
      Label5.Caption:=IntToStr(day) + '.' + IntToStr(month) + '.' +IntToStr(year);
 end;
 
