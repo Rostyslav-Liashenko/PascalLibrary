@@ -1,0 +1,84 @@
+object Form1: TForm1
+  Left = 524
+  Height = 240
+  Top = 246
+  Width = 576
+  Caption = 'Tomorrow'
+  ClientHeight = 240
+  ClientWidth = 576
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    Left = 52
+    Height = 23
+    Top = 32
+    Width = 68
+    AutoSize = False
+    Caption = 'Day'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 248
+    Height = 23
+    Top = 32
+    Width = 68
+    AutoSize = False
+    Caption = 'Month'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 440
+    Height = 23
+    Top = 32
+    Width = 68
+    AutoSize = False
+    Caption = 'Year'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 52
+    Height = 36
+    Top = 72
+    Width = 66
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 248
+    Height = 36
+    Top = 72
+    Width = 66
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Left = 440
+    Height = 36
+    Top = 72
+    Width = 66
+    TabOrder = 2
+  end
+  object Label4: TLabel
+    Left = 52
+    Height = 22
+    Top = 146
+    Width = 71
+    AutoSize = False
+    Caption = 'Next day'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 52
+    Height = 29
+    Top = 179
+    Width = 70
+    AutoSize = False
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 280
+    Height = 48
+    Top = 160
+    Width = 228
+    Caption = 'find out next day'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+end
