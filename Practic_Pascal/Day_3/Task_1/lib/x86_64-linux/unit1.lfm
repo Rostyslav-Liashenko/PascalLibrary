@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 539
-  Height = 307
-  Top = 163
-  Width = 588
+  Left = 435
+  Height = 353
+  Top = 204
+  Width = 553
   Caption = 'equation'
-  ClientHeight = 307
-  ClientWidth = 588
+  ClientHeight = 353
+  ClientWidth = 553
   LCLVersion = '2.0.6.0'
   object Edit1: TEdit
     Left = 56
@@ -91,12 +91,29 @@ object Form1: TForm1
     ParentColor = False
   end
   object Button1: TButton
-    Left = 399
+    Left = 56
     Height = 60
-    Top = 176
-    Width = 94
+    Top = 264
+    Width = 407
     Caption = 'Calculate'
     OnClick = Button1Click
     TabOrder = 3
+  end
+  object RadioButton1: TRadioButton
+    Left = 400
+    Height = 32
+    Top = 155
+    Width = 102
+    Caption = 'Equation1'
+    Checked = True
+    TabOrder = 4
+  end
+  object RadioButton2: TRadioButton
+    Left = 400
+    Height = 32
+    Top = 203
+    Width = 102
+    Caption = 'Equation2'
+    TabOrder = 5
   end
 end

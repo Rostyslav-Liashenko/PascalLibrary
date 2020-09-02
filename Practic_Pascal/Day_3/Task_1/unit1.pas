@@ -23,8 +23,13 @@ type
     Label5: TLabel;
     Label6: TLabel;
     Label7: TLabel;
+    RadioButton1: TRadioButton;
+    RadioButton2: TRadioButton;
     procedure Button1Click(Sender: TObject);
-    function CheckEdit():boolean;
+    function CheckEditEquation1():boolean;
+    function CheckEditEquation2():boolean;
+    procedure CalculateEquation1;
+    procedure CalculateEquation2;
   private
 
   public
@@ -40,26 +45,27 @@ implementation
 
 { TForm1 }
 
-function TForm1.CheckEdit():boolean;
+function TForm1.CheckEditEquation1():boolean;
 begin
      if (Edit1.Text = '') or (Edit2.Text = '') or (Edit3.Text = '') then
      begin
-          CheckEdit:=false;
+          CheckEditEquation1:=false;
      end
      else
-         CheckEdit:=true;
-
+         CheckEditEquation1:=true;
 end;
 
-procedure TForm1.Button1Click(Sender: TObject);
-Var c,b,x:real;
+function TForm1.CheckEditEquation2():boolean;
 begin
-     if  not CheckEdit() then
-         begin
-              Label6.Caption := 'Edit not fill';
-              Label7.Caption := 'Edit not fill';
-              exit;
-         end;
+     if (Edit1.Text = '') then
+        CheckEditEquation2:=false
+     else
+         CheckEditEquation2:=true;
+end;
+
+procedure TForm1.CalculateEquation1;
+Var x,b,c:real;
+begin
      x := StrToFloat(Edit1.Text);
      b := StrToFloat(Edit2.Text);
      c := StrToFloat(Edit3.Text);
@@ -79,7 +85,13 @@ begin
 
           end;
      end;
-     {2 equation}
+end;
+
+procedure TForm1.CalculateEquation2;
+Var x:real;
+begin
+   x := StrToFloat(Edit1.Text);
+   {2 equation}
      if (1 < x) and (x < 9) then
           Label7.Caption:=FloatToStr(16.5 * x + 9 * sqr(x) - 1.2 * (x * x *x))
      else
@@ -91,6 +103,31 @@ begin
      end;
 end;
 
+procedure TForm1.Button1Click(Sender: TObject);
+begin
+    if RadioButton1.Checked then
+    begin
+         if not CheckEditEquation1 then
+            Label6.Caption:='Fill the all input'
+         else
+         begin
+              CalculateEquation1;
+              Label7.Caption:='';
+         end;
+    end
+    else
+    begin
+         if not CheckEditEquation2 then
+            Label7.Caption:='Fill the "a" input'
+         else
+         begin
+             Label6.Caption:='';
+             Edit2.Text:='';
+             Edit3.Text:='';
+             CalculateEquation2;
+         end;
+    end;
+end;
 
 end.
 
