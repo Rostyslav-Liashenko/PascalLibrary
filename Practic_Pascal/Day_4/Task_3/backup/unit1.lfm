@@ -1,0 +1,101 @@
+object Form1: TForm1
+  Left = 476
+  Height = 296
+  Top = 185
+  Width = 719
+  Caption = 'Scholarship'
+  ClientHeight = 296
+  ClientWidth = 719
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    Left = 41
+    Height = 22
+    Top = 34
+    Width = 95
+    AutoSize = False
+    Caption = 'Math'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 240
+    Height = 22
+    Top = 34
+    Width = 95
+    AutoSize = False
+    Caption = 'English'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 400
+    Height = 22
+    Top = 34
+    Width = 120
+    AutoSize = False
+    Caption = 'Programming'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 568
+    Height = 22
+    Top = 34
+    Width = 95
+    AutoSize = False
+    Caption = 'Philosophy'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 40
+    Height = 36
+    Top = 71
+    Width = 96
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 224
+    Height = 36
+    Top = 71
+    Width = 96
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Left = 400
+    Height = 36
+    Top = 72
+    Width = 112
+    TabOrder = 2
+  end
+  object Edit4: TEdit
+    Left = 568
+    Height = 36
+    Top = 71
+    Width = 112
+    TabOrder = 3
+  end
+  object Label5: TLabel
+    Left = 41
+    Height = 31
+    Top = 184
+    Width = 123
+    AutoSize = False
+    Caption = 'Scholarship'
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label6: TLabel
+    Left = 40
+    Height = 17
+    Top = 240
+    Width = 184
+    AutoSize = False
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 386
+    Height = 66
+    Top = 186
+    Width = 229
+    Caption = 'Find out the scholarhip'
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+end
