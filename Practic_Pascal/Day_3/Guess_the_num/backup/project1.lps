@@ -17,10 +17,11 @@
         <Filename Value="unit1.pas"/>
         <IsPartOfProject Value="True"/>
         <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
         <UnitName Value="Unit1"/>
         <IsVisibleTab Value="True"/>
-        <TopLine Value="150"/>
+        <TopLine Value="149"/>
         <CursorPos X="30" Y="173"/>
         <UsageCount Value="20"/>
         <Loaded Value="True"/>

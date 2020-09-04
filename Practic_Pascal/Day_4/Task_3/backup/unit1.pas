@@ -1,4 +1,4 @@
-unit Unit1;
+unit Liashenko_indv;
 
 {$mode objfpc}{$H+}
 
@@ -64,7 +64,10 @@ begin
             Label5.Font.Color:=clPurple;
          end
          else
+         begin
             Label6.Caption:='34';
+            Label5.Font.Color:=clYellow;
+         end;
     end;
 end;
 

@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 449
+  Left = 335
   Height = 658
-  Top = 28
+  Top = 117
   Width = 632
   Caption = 'Tomorrow'
   ClientHeight = 658
@@ -18,7 +18,9 @@ object Form1: TForm1
     Width = 68
     AutoSize = False
     Caption = 'Day'
+    Font.Color = clWindowFrame
     ParentColor = False
+    ParentFont = False
   end
   object Label2: TLabel
     Left = 248
@@ -27,7 +29,9 @@ object Form1: TForm1
     Width = 68
     AutoSize = False
     Caption = 'Month'
+    Font.Color = clYellow
     ParentColor = False
+    ParentFont = False
   end
   object Label3: TLabel
     Left = 440
@@ -36,7 +40,9 @@ object Form1: TForm1
     Width = 68
     AutoSize = False
     Caption = 'Year'
+    Font.Color = clRed
     ParentColor = False
+    ParentFont = False
   end
   object Edit1: TEdit
     Left = 52
@@ -66,7 +72,9 @@ object Form1: TForm1
     Width = 71
     AutoSize = False
     Caption = 'Next day'
+    Font.Color = clGradientActiveCaption
     ParentColor = False
+    ParentFont = False
   end
   object Label5: TLabel
     Left = 52
@@ -79,12 +87,16 @@ object Form1: TForm1
     ParentFont = False
   end
   object Button1: TButton
-    Left = 304
-    Height = 48
-    Top = 136
-    Width = 228
+    Left = 152
+    Height = 62
+    Top = 146
+    Width = 136
     Caption = 'find out next day'
+    Font.Color = clFuchsia
     OnClick = Button1Click
+    OnMouseLeave = Button1MouseLeave
+    OnMouseMove = Button1MouseMove
+    ParentFont = False
     TabOrder = 3
   end
   object Image1: TImage
@@ -5434,5 +5446,27 @@ object Form1: TForm1
       9A9816163A48566A38565EAE0AC99C1F8BF01FDD38E3D084B42E310000000049
       454E44AE426082
     }
+  end
+  object Button2: TButton
+    Left = 328
+    Height = 59
+    Top = 148
+    Width = 135
+    Caption = 'Clear'
+    OnClick = Button2Click
+    OnMouseLeave = Button2MouseLeave
+    OnMouseMove = Button2MouseMove
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 496
+    Height = 53
+    Top = 150
+    Width = 107
+    Caption = 'Author'
+    OnClick = Button3Click
+    OnMouseLeave = Button3MouseLeave
+    OnMouseMove = Button3MouseMove
+    TabOrder = 5
   end
 end

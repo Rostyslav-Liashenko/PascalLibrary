@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 467
+  Left = 365
   Height = 365
-  Top = 185
+  Top = 255
   Width = 715
   Caption = 'Guess the number'
   ClientHeight = 365
@@ -12,6 +12,8 @@ object Form1: TForm1
   Constraints.MinHeight = 365
   Constraints.MinWidth = 715
   Font.Color = clNone
+  Font.Height = -13
+  Font.Name = 'Sans'
   Icon.Data = {
     BBDD00000000010001000000000001002000A5DD00001600000089504E470D0A
     1A0A0000000D49484452000001000000010008060000005C72A8660000DD6C49
@@ -6311,7 +6313,7 @@ object Form1: TForm1
     Left = 600
     Height = 32
     Top = 136
-    Width = 85
+    Width = 82
     Caption = 'Normal'
     TabOrder = 2
   end

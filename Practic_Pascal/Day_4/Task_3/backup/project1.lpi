@@ -41,7 +41,7 @@
         <ComponentName Value="Form1"/>
         <HasResources Value="True"/>
         <ResourceBaseClass Value="Form"/>
-        <UnitName Value="Unit1"/>
+        <UnitName Value="Liashenko_indv"/>
       </Unit1>
     </Units>
   </ProjectOptions>
