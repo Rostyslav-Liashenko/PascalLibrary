@@ -1,0 +1,82 @@
+object Form1: TForm1
+  Left = 472
+  Height = 442
+  Top = 183
+  Width = 656
+  Caption = 'First Program'
+  ClientHeight = 442
+  ClientWidth = 656
+  Color = clAqua
+  Font.Style = [fsBold]
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    Left = 264
+    Height = 32
+    Top = 24
+    Width = 124
+    AutoSize = False
+    Caption = 'Traffic lights'
+    Font.Color = clGrayText
+    Font.Height = -19
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Panel1: TPanel
+    Left = 96
+    Height = 36
+    Top = 96
+    Width = 467
+    TabOrder = 0
+  end
+  object Panel2: TPanel
+    Left = 96
+    Height = 40
+    Top = 161
+    Width = 464
+    TabOrder = 1
+  end
+  object Panel3: TPanel
+    Left = 97
+    Height = 38
+    Top = 225
+    Width = 463
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 88
+    Height = 29
+    Top = 328
+    Width = 109
+    Caption = 'Red'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 279
+    Height = 29
+    Top = 328
+    Width = 109
+    Caption = 'Yellow'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 495
+    Height = 29
+    Top = 328
+    Width = 109
+    Caption = 'Green'
+    OnClick = Button3Click
+    TabOrder = 5
+  end
+  object Button4: TButton
+    Left = 256
+    Height = 32
+    Top = 398
+    Width = 162
+    Caption = 'Author'
+    OnClick = Button4Click
+    TabOrder = 6
+  end
+end
