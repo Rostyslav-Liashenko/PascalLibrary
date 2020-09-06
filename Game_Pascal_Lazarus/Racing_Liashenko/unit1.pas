@@ -77,9 +77,6 @@ implementation
 {$R *.lfm}
 
  { TForm1 }
- {Забрать досрочно деньги}
- {Уровни сложности}
- {Сменить машинки}
 
 procedure TForm1.ShowMoney;
 begin
@@ -107,9 +104,9 @@ end;
 
 function TForm1.CheckBet:boolean;
 begin
-   if edit1.Text = '' then
+   if (edit1.Text = '') or (StrToInt(edit1.Text) <= 0) then
       begin
-           ShowMessage('Please input your bet');
+           ShowMessage('Please input your correct bet');
            CheckBet:=false;
       end
       else
@@ -128,7 +125,7 @@ begin
            if  not (cars[i].finished) then
            begin
                 cars[i].finished:=true;
-                Memo1.Lines.Add('Car #' + IntToStr(i));
+                Memo1.Lines.Add(cars[i].name);
                 if not isWin then
                 begin
                      isWin:=true;
@@ -161,12 +158,17 @@ end;
 procedure TForm1.FormCreate(Sender: TObject); {prepare for game}
 var i:integer;
 begin
+     Randomize;
      isGame:=false;
      Memo1.Clear;
      for i:=Min_cars to Max_cars do
      begin
        cars[i].name:='cars_' + IntToStr(i);
      end;
+     cars[1].name:='Green';
+     cars[2].name:='Blue';
+     cars[3].name:='Purple';
+     cars[4].name:='Red';
      cars[1].Pic:=Image1;
      cars[2].Pic:=Image2;
      cars[3].Pic:=Image3;
@@ -209,7 +211,7 @@ begin
                for i:=Min_cars to Max_cars do
                begin
                     if  not (cars[i].finished) then
-                        cars[i].Pic.Left:=cars[i].Pic.Left + Random(5);
+                        cars[i].Pic.Left:=cars[i].Pic.Left + Random(8);
                end;
           end;
 

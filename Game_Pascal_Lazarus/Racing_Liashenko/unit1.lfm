@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 238
+  Left = 127
   Height = 399
-  Top = 200
+  Top = 195
   Width = 1180
   Align = alRight
   Caption = 'Racing'
@@ -536,14 +536,14 @@ object Form1: TForm1
       ItemHeight = 0
       ItemIndex = 0
       Items.Strings = (
-        'car #1'
-        'car #2'
-        'car #3'
-        'car #4'
+        'Green'
+        'Blue'
+        'Purple'
+        'Red'
       )
       ParentFont = False
       TabOrder = 2
-      Text = 'car #1'
+      Text = 'Green'
     end
     object Label3: TLabel
       Left = 160
@@ -598,6 +598,10 @@ object Form1: TForm1
     Height = 120
     Top = 80
     Width = 120
+    Font.Color = 717756
+    Font.Height = -19
+    ParentFont = False
+    ReadOnly = True
     TabOrder = 1
   end
   object Label2: TLabel
@@ -606,7 +610,7 @@ object Form1: TForm1
     Top = 56
     Width = 80
     AutoSize = False
-    Caption = 'TOP 3 CARS'
+    Caption = 'TOP CARS'
     ParentColor = False
   end
   object Image6: TImage
