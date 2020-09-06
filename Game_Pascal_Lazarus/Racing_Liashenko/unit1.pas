@@ -31,9 +31,11 @@ type
     Edit1: TEdit;
     Image1: TImage;
     Image2: TImage;
-    Image3: TImage;
+    Image7: TImage;
     Image4: TImage;
     Image5: TImage;
+    Image6: TImage;
+    Image3: TImage;
     Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
@@ -134,7 +136,6 @@ begin
                 end;
            end;
         end
-
    end;
 end;
 
@@ -207,7 +208,8 @@ begin
           begin
                for i:=Min_cars to Max_cars do
                begin
-                   cars[i].Pic.Left:=cars[i].Pic.Left + Random(5);
+                    if  not (cars[i].finished) then
+                        cars[i].Pic.Left:=cars[i].Pic.Left + Random(5);
                end;
           end;
 
