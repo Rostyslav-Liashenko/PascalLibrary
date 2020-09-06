@@ -1,79 +1,122 @@
 object Form1: TForm1
-  Left = 374
+  Left = 131
   Height = 399
-  Top = 189
-  Width = 1167
+  Top = 182
+  Width = 1180
+  Align = alRight
   Caption = 'Racing'
   ClientHeight = 399
-  ClientWidth = 1167
+  ClientWidth = 1180
+  Constraints.MaxHeight = 399
+  Constraints.MaxWidth = 1180
+  Constraints.MinHeight = 399
+  Constraints.MinWidth = 1180
   OnCreate = FormCreate
+  Position = poScreenCenter
   LCLVersion = '2.0.6.0'
   object Panel1: TPanel
     Left = 0
     Height = 50
     Top = 0
-    Width = 1167
+    Width = 1180
     Align = alTop
     ClientHeight = 50
-    ClientWidth = 1167
+    ClientWidth = 1180
     TabOrder = 0
     object Button1: TButton
-      Left = 27
-      Height = 31
+      Left = 32
+      Height = 37
       Top = 7
-      Width = 74
+      Width = 101
       Caption = 'Start'
       OnClick = Button1Click
       TabOrder = 0
     end
     object Label1: TLabel
-      Left = 328
-      Height = 18
-      Top = 16
-      Width = 48
+      Left = 368
+      Height = 22
+      Top = 14
+      Width = 40
       AutoSize = False
-      Caption = 'bet'
+      Caption = 'Bet'
+      Font.Color = 921280
+      Font.Height = -19
       ParentColor = False
+      ParentFont = False
     end
     object Edit1: TEdit
-      Left = 384
+      Left = 408
       Height = 36
-      Top = 8
-      Width = 56
+      Top = 7
+      Width = 88
+      Font.Color = clWhite
+      ParentFont = False
       TabOrder = 1
     end
     object ComboBox1: TComboBox
-      Left = 464
+      Left = 648
       Height = 36
       Top = 7
       Width = 124
+      Font.Color = clWhite
       ItemHeight = 0
+      ItemIndex = 0
       Items.Strings = (
         'car #1'
         'car #2'
         'car #3'
         'car #4'
       )
+      ParentFont = False
       TabOrder = 2
-      Text = 'car_1'
+      Text = 'car #1'
     end
     object Label3: TLabel
-      Left = 128
-      Height = 15
-      Top = 16
-      Width = 45
+      Left = 160
+      Height = 27
+      Top = 14
+      Width = 64
       AutoSize = False
       Caption = 'Money'
+      Font.Color = clWhite
+      Font.Height = -19
       ParentColor = False
+      ParentFont = False
     end
     object Label4: TLabel
-      Left = 210
+      Left = 248
       Height = 18
-      Top = 16
-      Width = 54
+      Top = 14
+      Width = 112
       AutoSize = False
       Caption = 'Your Money'
+      Font.Color = 1211154
+      Font.Height = -19
       ParentColor = False
+      ParentFont = False
+    end
+    object Label5: TLabel
+      Left = 784
+      Height = 26
+      Top = 10
+      Width = 360
+      AutoSize = False
+      Caption = 'Create by Liashenko Rostyslav PSK-18'
+      Font.Color = clWhite
+      Font.Height = -21
+      ParentColor = False
+      ParentFont = False
+    end
+    object Label6: TLabel
+      Left = 512
+      Height = 20
+      Top = 14
+      Width = 123
+      Caption = 'Your Favourite'
+      Font.Color = 921280
+      Font.Height = -19
+      ParentColor = False
+      ParentFont = False
     end
   end
   object Image5: TImage
@@ -21867,7 +21910,7 @@ object Form1: TForm1
   object Timer1: TTimer
     Interval = 50
     OnTimer = Timer1Timer
-    left = 768
-    top = 8
+    left = 1136
+    top = 371
   end
 end

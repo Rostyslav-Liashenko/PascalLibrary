@@ -38,6 +38,8 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
+    Label5: TLabel;
+    Label6: TLabel;
     Memo1: TMemo;
     Panel1: TPanel;
     Timer1: TTimer;
@@ -77,12 +79,11 @@ implementation
  {Уровни сложности}
  {Сменить машинки}
  {Сменить фавикон}
- {обробочтик на пустое поле ввода ставки}
-
+ {Улучшить интерфейс}
 
 procedure TForm1.ShowMoney;
 begin
-   Label4.Caption:=IntToStr(Money);
+   Label4.Caption:=IntToStr(Money) + '$';
 end;
 
 procedure TForm1.ManagerBet;  {Decided player is win or not}
@@ -91,7 +92,12 @@ begin
    begin
         Money:=Money+(bet * 3); {double bat + money}
         ShowMoney;
+        ShowMessage('You win!!');
    end
+   else
+   begin
+       ShowMessage('You lose!!!');
+   end;
 end;
 
 function TForm1.CheckBet:boolean;
