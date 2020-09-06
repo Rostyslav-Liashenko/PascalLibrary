@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 150
+  Left = 133
   Height = 399
-  Top = 192
+  Top = 201
   Width = 1180
   Align = alRight
   Caption = 'Racing'
@@ -587,7 +587,7 @@ object Form1: TForm1
       Top = 14
       Width = 123
       Caption = 'Your Favourite'
-      Font.Color = 921280
+      Font.Color = 61439
       Font.Height = -19
       ParentColor = False
       ParentFont = False
@@ -2160,9 +2160,9 @@ object Form1: TForm1
     }
   end
   object Image4: TImage
-    Left = 24
+    Left = 296
     Height = 58
-    Top = 272
+    Top = 336
     Width = 82
     Picture.Data = {
       1754506F727461626C654E6574776F726B477261706869635975020089504E47
@@ -7205,9 +7205,9 @@ object Form1: TForm1
     Stretch = True
   end
   object Image3: TImage
-    Left = 24
+    Left = 536
     Height = 58
-    Top = 336
+    Top = 264
     Width = 82
     Picture.Data = {
       1754506F727461626C654E6574776F726B477261706869633D90020089504E47
@@ -12465,7 +12465,7 @@ object Form1: TForm1
     Stretch = True
   end
   object Image2: TImage
-    Left = 24
+    Left = 296
     Height = 58
     Top = 160
     Width = 82
@@ -17668,9 +17668,9 @@ object Form1: TForm1
     Stretch = True
   end
   object Image1: TImage
-    Left = 24
+    Left = 536
     Height = 58
-    Top = 96
+    Top = 88
     Width = 82
     Picture.Data = {
       1754506F727461626C654E6574776F726B47726170686963B49F020089504E47
