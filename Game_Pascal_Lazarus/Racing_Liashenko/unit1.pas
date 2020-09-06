@@ -74,12 +74,10 @@ implementation
 
 {$R *.lfm}
 
-{ TForm1 }
+ { TForm1 }
  {Забрать досрочно деньги}
  {Уровни сложности}
  {Сменить машинки}
- {Сменить фавикон}
- {Улучшить интерфейс}
 
 procedure TForm1.ShowMoney;
 begin
@@ -97,6 +95,11 @@ begin
    else
    begin
        ShowMessage('You lose!!!');
+   end;
+   if (Money <= 0) then
+   begin
+        ShowMessage('Game Over');
+        Close; {exit program}
    end;
 end;
 

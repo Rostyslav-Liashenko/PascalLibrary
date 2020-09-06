@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 300
+  Left = 134
   Height = 399
-  Top = 266
+  Top = 207
   Width = 1180
   Align = alRight
   Caption = 'Racing'
