@@ -5,7 +5,8 @@ unit Unit1;
 interface
 
 uses
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls;
+  Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ExtCtrls,
+  Calendar;
 
 type
 
@@ -15,13 +16,7 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
-    Edit1: TEdit;
-    Edit2: TEdit;
-    Edit3: TEdit;
-    Image1: TImage;
-    Label1: TLabel;
-    Label2: TLabel;
-    Label3: TLabel;
+    Calendar1: TCalendar;
     Label4: TLabel;
     Label5: TLabel;
     procedure Button1Click(Sender: TObject);
@@ -36,6 +31,7 @@ type
     procedure Button3MouseLeave(Sender: TObject);
     procedure Button3MouseMove(Sender: TObject; Shift: TShiftState; X,
       Y: Integer);
+    procedure Calendar1Change(Sender: TObject);
   private
 
   public
@@ -44,7 +40,7 @@ type
 
 var
   Form1: TForm1;
-
+  FullDate:string;
 implementation
 
 {$R *.lfm}
@@ -53,15 +49,28 @@ implementation
 
 procedure TForm1.Button1Click(Sender: TObject);
 Var
+
   day,month,year: integer;
   maxDay:integer;
+  tmp:string;
 begin
-     edit1.setfocus;
-     day := StrToInt(Edit1.Text) + 1;
-     month := StrToInt(Edit2.Text);
-     year := StrToInt(Edit3.Text);
+     tmp:=Copy(FullDate,1,pos('-',FullDate)-1);
+     day:=StrToInt(tmp) + 1;
+     Delete(FullDate,1,pos('-',FullDate));
+
+     tmp:=Copy(FullDate,1,pos('-',FullDate)-1);
+     month:=StrToInt(tmp);
+     Delete(FullDate,1,pos('-',FullDate));
+
+     year:=StrToInt(FullDate);
+
      if (month = 2) then
-        maxDay:=29
+     begin
+        if (year mod 4 <> 0) or (year mod 100 = 0) and (year mod 400 <> 0) then
+           maxDay:=28
+        else
+            maxDay:=29;
+     end
      else
      begin
           if (month = 1) or (month = 3) or (month = 5) or (month = 7) or (month = 8) or (month = 10) or (month = 12) then
@@ -83,6 +92,27 @@ begin
      Label5.Caption:=IntToStr(day) + '.' + IntToStr(month) + '.' +IntToStr(year);
 end;
 
+
+
+procedure TForm1.Calendar1Change(Sender: TObject);
+begin
+     FullDate:=Calendar1.Date;
+     {ShowMessage(FullDate);}
+end;
+
+
+procedure TForm1.Button2Click(Sender: TObject);
+begin
+  Label5.Caption:='';
+end;
+
+procedure TForm1.Button3Click(Sender: TObject);
+begin
+  ShowMessage('Create by Liashenko Rostyslav');
+end;
+
+{effects move}
+
 procedure TForm1.Button1MouseLeave(Sender: TObject);
 begin
   Button1.Font.Color:=clDefault;
@@ -94,15 +124,6 @@ begin
   Button1.Font.Color:=clRed;
 end;
 
-
-
-procedure TForm1.Button2Click(Sender: TObject);
-begin
-  edit1.text:='';
-  edit2.text:='';
-  edit3.text:='';
-end;
-
 procedure TForm1.Button2MouseLeave(Sender: TObject);
 begin
   Button2.Font.Color:=clDefault;
@@ -112,11 +133,6 @@ procedure TForm1.Button2MouseMove(Sender: TObject; Shift: TShiftState; X,
   Y: Integer);
 begin
   Button2.Font.Color:=clYellow;
-end;
-
-procedure TForm1.Button3Click(Sender: TObject);
-begin
-  ShowMessage('Create by Liashenko Rostyslav');
 end;
 
 procedure TForm1.Button3MouseLeave(Sender: TObject);
