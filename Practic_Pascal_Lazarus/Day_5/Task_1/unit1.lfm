@@ -1,0 +1,103 @@
+object Form1: TForm1
+  Left = 445
+  Height = 306
+  Top = 285
+  Width = 376
+  Caption = 'Resistors'
+  ClientHeight = 306
+  ClientWidth = 376
+  LCLVersion = '2.0.6.0'
+  object RadioButton1: TRadioButton
+    Left = 232
+    Height = 32
+    Top = 48
+    Width = 117
+    Caption = 'Consistently'
+    Checked = True
+    TabOrder = 3
+    TabStop = True
+  end
+  object RadioButton2: TRadioButton
+    Left = 232
+    Height = 32
+    Top = 88
+    Width = 118
+    AutoSize = False
+    Caption = 'Parell'
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 21
+    Height = 15
+    Top = 48
+    Width = 21
+    Caption = 'R1:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 21
+    Height = 15
+    Top = 105
+    Width = 21
+    Caption = 'R2:'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 51
+    Height = 36
+    Top = 40
+    Width = 54
+    TabOrder = 1
+  end
+  object Edit2: TEdit
+    Left = 52
+    Height = 36
+    Top = 96
+    Width = 53
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 33
+    Height = 60
+    Top = 160
+    Width = 105
+    Caption = 'Calc'
+    OnClick = Button1Click
+    TabOrder = 4
+  end
+  object Button2: TButton
+    Left = 232
+    Height = 60
+    Top = 160
+    Width = 105
+    Caption = 'Clear'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object Button3: TButton
+    Left = 33
+    Height = 60
+    Top = 232
+    Width = 105
+    Caption = 'Author'
+    OnClick = Button3Click
+    TabOrder = 6
+  end
+  object Label3: TLabel
+    Left = 239
+    Height = 20
+    Top = 236
+    Width = 98
+    AutoSize = False
+    Caption = 'Result'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 240
+    Height = 22
+    Top = 264
+    Width = 80
+    AutoSize = False
+    ParentColor = False
+  end
+end

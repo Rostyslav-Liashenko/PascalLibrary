@@ -1,0 +1,70 @@
+object Form1: TForm1
+  Left = 462
+  Height = 211
+  Top = 192
+  Width = 541
+  Caption = 'Discount'
+  ClientHeight = 211
+  ClientWidth = 541
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    Left = 33
+    Height = 24
+    Top = 8
+    Width = 111
+    AutoSize = False
+    Caption = 'Purchase price'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 34
+    Height = 36
+    Top = 35
+    Width = 105
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Left = 35
+    Height = 15
+    Top = 95
+    Width = 45
+    AutoSize = False
+    Caption = 'Sum'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 33
+    Height = 23
+    Top = 128
+    Width = 110
+    AutoSize = False
+    ParentColor = False
+  end
+  object Button1: TButton
+    Left = 336
+    Height = 55
+    Top = 16
+    Width = 139
+    Caption = 'Calc'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Button2: TButton
+    Left = 336
+    Height = 55
+    Top = 80
+    Width = 139
+    Caption = 'Clear'
+    OnClick = Button2Click
+    TabOrder = 2
+  end
+  object Button3: TButton
+    Left = 336
+    Height = 55
+    Top = 144
+    Width = 139
+    Caption = 'Author'
+    OnClick = Button3Click
+    TabOrder = 3
+  end
+end
