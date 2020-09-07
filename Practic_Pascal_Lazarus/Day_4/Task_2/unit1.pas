@@ -97,7 +97,6 @@ end;
 procedure TForm1.Calendar1Change(Sender: TObject);
 begin
      FullDate:=Calendar1.Date;
-     {ShowMessage(FullDate);}
 end;
 
 
