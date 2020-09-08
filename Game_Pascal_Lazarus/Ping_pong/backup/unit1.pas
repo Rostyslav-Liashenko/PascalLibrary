@@ -38,11 +38,12 @@ implementation
 
 procedure TForm1.FormCreate(Sender: TObject);
 begin
-  PosX:=30;
+  PosX:=50;
   PosY:=50;
   VelX:=1;
   VelY:=2;
   Randomize;
+  Sleep(1000);
 end;
 
 procedure TForm1.FormMouseMove(Sender: TObject; Shift: TShiftState; X,
@@ -79,7 +80,7 @@ begin
           ShowMessage('Player Winner');
           Close;
      end;
-  if (Shape1.Left > Shape2.Left + Shape2.Width) then
+  if (Shape1.Left > Shape2.Left) then
      begin
           ShowMessage('Computer Winner');
           Close;
