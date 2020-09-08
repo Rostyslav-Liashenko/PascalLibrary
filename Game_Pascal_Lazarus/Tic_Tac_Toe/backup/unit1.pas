@@ -78,7 +78,7 @@ procedure TForm1.Button1Click(Sender: TObject);
 begin
    Prepare;
    Label3.Caption:='';
-   Label4.Caption:='';
+   Label5.Caption:='';
 end;
 
 procedure TForm1.ShowPlayer;

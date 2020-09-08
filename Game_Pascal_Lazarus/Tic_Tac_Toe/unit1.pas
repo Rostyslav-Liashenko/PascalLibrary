@@ -23,6 +23,7 @@ type
     Image7: TImage;
     Image8: TImage;
     Image9: TImage;
+    Label1: TLabel;
     Label2: TLabel;
     Label3: TLabel;
     Label4: TLabel;
