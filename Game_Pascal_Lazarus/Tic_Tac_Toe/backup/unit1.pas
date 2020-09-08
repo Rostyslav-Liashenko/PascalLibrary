@@ -27,6 +27,7 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Shape1: TShape;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image10Click(Sender: TObject);
@@ -76,6 +77,8 @@ end;
 procedure TForm1.Button1Click(Sender: TObject);
 begin
    Prepare;
+   Label3.Caption:='';
+   Label4.Caption:='';
 end;
 
 procedure TForm1.ShowPlayer;
@@ -101,10 +104,6 @@ begin
       Label5.Caption:=Label3.Caption;
       ShowMessage('Game Over!!!');
    end
-   else
-   begin
-     ShowMessage('Pizda');
-   end;
 end;
 
 procedure TForm1.BasicLogic(nom_pic:integer);

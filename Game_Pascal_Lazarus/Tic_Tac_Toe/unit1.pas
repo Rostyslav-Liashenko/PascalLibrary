@@ -27,6 +27,7 @@ type
     Label3: TLabel;
     Label4: TLabel;
     Label5: TLabel;
+    Shape1: TShape;
     procedure Button1Click(Sender: TObject);
     procedure FormCreate(Sender: TObject);
     procedure Image10Click(Sender: TObject);
@@ -76,6 +77,8 @@ end;
 procedure TForm1.Button1Click(Sender: TObject);
 begin
    Prepare;
+   Label3.Caption:='';
+   Label5.Caption:='';
 end;
 
 procedure TForm1.ShowPlayer;
