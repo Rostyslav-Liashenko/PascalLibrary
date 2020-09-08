@@ -1,0 +1,110 @@
+object Form1: TForm1
+  Left = 494
+  Height = 292
+  Top = 169
+  Width = 398
+  Caption = 'Calculate'
+  ClientHeight = 292
+  ClientWidth = 398
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    Left = 13
+    Height = 15
+    Top = 32
+    Width = 67
+    AutoSize = False
+    Caption = '1-number'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 87
+    Height = 36
+    Top = 24
+    Width = 65
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 88
+    Height = 36
+    Top = 80
+    Width = 65
+    TabOrder = 1
+  end
+  object Edit3: TEdit
+    Left = 88
+    Height = 36
+    Top = 144
+    Width = 65
+    Enabled = False
+    TabOrder = 2
+  end
+  object RG1: TRadioGroup
+    Left = 248
+    Height = 156
+    Top = 24
+    Width = 112
+    AutoFill = True
+    Caption = 'Operation'
+    ChildSizing.LeftRightSpacing = 6
+    ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+    ChildSizing.EnlargeVertical = crsHomogenousChildResize
+    ChildSizing.ShrinkHorizontal = crsScaleChilds
+    ChildSizing.ShrinkVertical = crsScaleChilds
+    ChildSizing.Layout = cclLeftToRightThenTopToBottom
+    ChildSizing.ControlsPerLine = 1
+    ClientHeight = 138
+    ClientWidth = 110
+    Items.Strings = (
+      'add'
+      'sub'
+      'multiply'
+      'divison'
+    )
+    TabOrder = 3
+  end
+  object Label2: TLabel
+    Left = 13
+    Height = 15
+    Top = 88
+    Width = 67
+    AutoSize = False
+    Caption = '2-number'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 13
+    Height = 15
+    Top = 152
+    Width = 67
+    AutoSize = False
+    Caption = 'Result'
+    ParentColor = False
+  end
+  object Button2: TButton
+    Left = 144
+    Height = 45
+    Top = 224
+    Width = 96
+    Caption = 'Clear'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 16
+    Height = 45
+    Top = 224
+    Width = 96
+    Caption = 'Calculate'
+    OnClick = Button3Click
+    TabOrder = 5
+  end
+  object Button1: TButton
+    Left = 280
+    Height = 45
+    Top = 224
+    Width = 95
+    Caption = 'Author'
+    OnClick = Button1Click
+    TabOrder = 6
+  end
+end
