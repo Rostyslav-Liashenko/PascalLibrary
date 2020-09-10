@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 393
-  Height = 315
-  Top = 184
-  Width = 722
+  Left = 642
+  Height = 311
+  Top = 78
+  Width = 829
   Caption = 'Function'
-  ClientHeight = 315
-  ClientWidth = 722
+  ClientHeight = 311
+  ClientWidth = 829
   Color = clWhite
   Font.Color = 313860
   Font.Height = -19
@@ -13,7 +13,7 @@ object Form1: TForm1
   OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
   object Memo1: TMemo
-    Left = 408
+    Left = 560
     Height = 263
     Top = 16
     Width = 264
@@ -261,7 +261,7 @@ object Form1: TForm1
     Stretch = True
   end
   object Button1: TButton
-    Left = 272
+    Left = 440
     Height = 71
     Top = 16
     Width = 110
@@ -275,9 +275,9 @@ object Form1: TForm1
     TabOrder = 1
   end
   object Button2: TButton
-    Left = 272
+    Left = 440
     Height = 71
-    Top = 120
+    Top = 112
     Width = 110
     Caption = 'Clear'
     Font.Color = 16007232
@@ -288,7 +288,7 @@ object Form1: TForm1
     TabOrder = 2
   end
   object Button3: TButton
-    Left = 272
+    Left = 440
     Height = 71
     Top = 208
     Width = 110
@@ -345,5 +345,81 @@ object Form1: TForm1
     Width = 212
     Brush.Color = clGradientActiveCaption
     Brush.Style = bsClear
+  end
+  object Label1: TLabel
+    Left = 258
+    Height = 20
+    Top = 28
+    Width = 11
+    Caption = 'a'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 261
+    Height = 20
+    Top = 88
+    Width = 11
+    Caption = 'b'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 258
+    Height = 20
+    Top = 163
+    Width = 14
+    AutoSize = False
+    Caption = 'x'
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 256
+    Height = 20
+    Top = 216
+    Width = 21
+    Caption = 'xn'
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 237
+    Height = 20
+    Top = 272
+    Width = 40
+    Caption = 'Step'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 288
+    Height = 41
+    Top = 16
+    Width = 80
+    TabOrder = 5
+  end
+  object Edit2: TEdit
+    Left = 288
+    Height = 41
+    Top = 80
+    Width = 80
+    TabOrder = 6
+  end
+  object Edit3: TEdit
+    Left = 288
+    Height = 41
+    Top = 150
+    Width = 80
+    TabOrder = 7
+  end
+  object Edit4: TEdit
+    Left = 288
+    Height = 41
+    Top = 208
+    Width = 80
+    TabOrder = 8
+  end
+  object Edit5: TEdit
+    Left = 288
+    Height = 41
+    Top = 264
+    Width = 80
+    TabOrder = 9
   end
 end

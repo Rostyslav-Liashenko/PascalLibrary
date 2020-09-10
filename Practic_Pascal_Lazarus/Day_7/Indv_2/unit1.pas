@@ -15,8 +15,18 @@ type
     Button1: TButton;
     Button2: TButton;
     Button3: TButton;
+    Edit1: TEdit;
+    Edit2: TEdit;
+    Edit3: TEdit;
+    Edit4: TEdit;
+    Edit5: TEdit;
     Image1: TImage;
     Image2: TImage;
+    Label1: TLabel;
+    Label2: TLabel;
+    Label3: TLabel;
+    Label4: TLabel;
+    Label5: TLabel;
     Memo1: TMemo;
     RadioGroup1: TRadioGroup;
     Shape1: TShape;
@@ -42,16 +52,22 @@ implementation
 { TForm1 }
 
 procedure TForm1.Button1Click(Sender: TObject);
-Var y,x1,xn,deltaX,a,b:real;
+Var y,x1,xn,deltaX,a,b,tmp,tmp2:real;
 begin
-   x1:=2;
-   xn:=4;
-   deltaX:=0.4;
-   a:=1.4;
-   b:=2.5;
+   x1:=StrToFloat(edit3.text);
+   xn:=StrToFloat(edit4.text);
+   deltaX:=StrToFloat(edit5.text);;
+   a:=StrToFloat(edit1.text); ;
+   b:=StrToFloat(edit2.text);
    while (x1 <= xn) do
    begin
-        y:=(ln(a * x1 *x1 + b)) / (a * x1 + 1);
+        tmp:= a * x1 *x1 + b;
+        tmp2:=a * x1 + 1;
+        if (tmp <= 0) or (tmp2 = 0) then
+        begin
+            Memo1.Lines.add('Funtion not declared');
+        end;
+        y:=(ln(tmp)) / (tmp2);
         Memo1.Lines.add('y = ' + FloatToStrF(y,ffFixed,8,4));
         x1:=x1+deltaX;
    end;

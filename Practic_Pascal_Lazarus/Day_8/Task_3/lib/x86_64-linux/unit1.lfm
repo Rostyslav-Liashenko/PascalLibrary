@@ -1,0 +1,74 @@
+object Form1: TForm1
+  Left = 349
+  Height = 273
+  Top = 174
+  Width = 657
+  Caption = 'Calculation Funtion'
+  ClientHeight = 273
+  ClientWidth = 657
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    Left = 37
+    Height = 15
+    Top = 20
+    Width = 13
+    Caption = 'X:'
+    ParentColor = False
+  end
+  object Label2: TLabel
+    Left = 37
+    Height = 15
+    Top = 62
+    Width = 15
+    Caption = 'N:'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 64
+    Height = 36
+    Top = 8
+    Width = 80
+    TabOrder = 0
+  end
+  object Edit2: TEdit
+    Left = 64
+    Height = 36
+    Top = 64
+    Width = 80
+    TabOrder = 1
+  end
+  object Memo1: TMemo
+    Left = 288
+    Height = 246
+    Top = 8
+    Width = 336
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 64
+    Top = 120
+    Width = 136
+    Caption = 'Calculate'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 16
+    Height = 72
+    Top = 192
+    Width = 136
+    Caption = 'Clear'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 168
+    Height = 64
+    Top = 120
+    Width = 101
+    Caption = 'Author'
+    OnClick = Button3Click
+    TabOrder = 5
+  end
+end

@@ -1,11 +1,11 @@
 object Form1: TForm1
-  Left = 454
-  Height = 315
-  Top = 232
-  Width = 722
+  Left = 229
+  Height = 311
+  Top = 203
+  Width = 829
   Caption = 'Function'
-  ClientHeight = 315
-  ClientWidth = 722
+  ClientHeight = 311
+  ClientWidth = 829
   Color = clWhite
   Font.Color = 313860
   Font.Height = -19
@@ -13,7 +13,7 @@ object Form1: TForm1
   OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
   object Memo1: TMemo
-    Left = 408
+    Left = 560
     Height = 263
     Top = 16
     Width = 264
@@ -261,7 +261,7 @@ object Form1: TForm1
     Stretch = True
   end
   object Button1: TButton
-    Left = 272
+    Left = 440
     Height = 71
     Top = 16
     Width = 110
@@ -275,9 +275,9 @@ object Form1: TForm1
     TabOrder = 1
   end
   object Button2: TButton
-    Left = 272
+    Left = 440
     Height = 71
-    Top = 120
+    Top = 112
     Width = 110
     Caption = 'Clear'
     Font.Color = 16007232
@@ -288,7 +288,7 @@ object Form1: TForm1
     TabOrder = 2
   end
   object Button3: TButton
-    Left = 272
+    Left = 440
     Height = 71
     Top = 208
     Width = 110
