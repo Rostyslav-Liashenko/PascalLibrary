@@ -18,6 +18,7 @@ type
     Label2: TLabel;
     Label3: TLabel;
     Panel1: TPanel;
+    RadioGroup1: TRadioGroup;
     Shape1: TShape;
     Shape2: TShape;
     Shape3: TShape;
@@ -28,7 +29,9 @@ type
     procedure FormMouseMove(Sender: TObject; Shift: TShiftState; X, Y: Integer);
     procedure Timer1Timer(Sender: TObject);
     procedure Timer2Timer(Sender: TObject);
+    {My specefic procedure and functio}
     procedure EndGame(s:string);
+    procedure IndependentDifficult(fig:TShape);
   private
 
   public
@@ -38,12 +41,28 @@ type
 var
   Form1: TForm1;
   PosX,PosY,VelX,VelY:Single;
+  countBit:integer;
 implementation
 
 {$R *.lfm}
 
 { TForm1 }
 
+
+procedure TForm1.IndependentDifficult(fig:TShape);
+begin
+  case RadioGroup1.ItemIndex of
+       0:begin
+          fig.Height:=fig.Height - 5;
+       end;
+       1:begin
+          fig.Height:=fig.Height - 10;
+       end;
+       2:begin
+          fig.Height:=fig.Height - 15;
+       end;
+  end;
+end;
 
 procedure TForm1.EndGame(s:string);
 begin
@@ -62,7 +81,10 @@ begin
   VelX:=1;
   VelY:=2;
   Button1.Enabled:=false;
+  countBit:=0;
   Randomize;
+  Shape2.Height:=165;
+  Shape3.Height:=165;
 end;
 
 procedure TForm1.Button1Click(Sender: TObject);
@@ -97,10 +119,18 @@ begin
   Shape1.Top:=round(Posy);
   if InterSectRect(Overlay, Shape2.BoundsRect, Shape1.BoundsRect) then
   begin
-       ShowMessage(FloatToStr(Velx));
-       ShowMessage(FloatTOStr(VelY));
+    if countBit < 8 then
+    begin
        VelX:=-VelX - Random(5);
        VelY:=-VelY - Random(5);
+       inc(countBit);
+    end
+    else
+    begin
+       VelX:=-VelX;
+       VelY:=-VelY;
+    end;
+    IndependentDifficult(Shape2);
   end;
   if (Shape1.Left <= 0) then
      begin
@@ -126,8 +156,19 @@ begin
      Shape3.Top:=Shape1.Top - Shape3.Width;
   if InterSectRect(Overlay,Shape3.BoundsRect, Shape1.BoundsRect) then
   begin
-    VelX:=-VelX + Random(5);
-    VelY:=-VelY + Random(5);
+    if countBit < 8 then
+    begin
+         VelX:=-VelX + Random(5);
+         VelY:=-VelY + Random(5);
+
+         Inc(countBit);
+    end
+    else
+    begin
+       VelX:=-VelX;
+       VelY:=-VelY;
+    end;
+    IndependentDifficult(Shape3);
   end;
 end;
 

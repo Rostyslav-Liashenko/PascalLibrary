@@ -1,7 +1,7 @@
 object Form1: TForm1
-  Left = 262
+  Left = 359
   Height = 333
-  Top = 208
+  Top = 150
   Width = 977
   Caption = 'Ping Pong'
   ClientHeight = 333
@@ -55,9 +55,9 @@ object Form1: TForm1
       ParentFont = False
     end
     object Label1: TLabel
-      Left = 16
+      Left = 48
       Height = 30
-      Top = 88
+      Top = 80
       Width = 159
       AutoSize = False
       Font.Height = -19
@@ -76,6 +76,30 @@ object Form1: TForm1
       Font.Style = [fsBold, fsItalic]
       ParentColor = False
       ParentFont = False
+    end
+    object RadioGroup1: TRadioGroup
+      Left = 32
+      Height = 114
+      Top = 120
+      Width = 185
+      AutoFill = True
+      Caption = 'Settings'
+      ChildSizing.LeftRightSpacing = 6
+      ChildSizing.EnlargeHorizontal = crsHomogenousChildResize
+      ChildSizing.EnlargeVertical = crsHomogenousChildResize
+      ChildSizing.ShrinkHorizontal = crsScaleChilds
+      ChildSizing.ShrinkVertical = crsScaleChilds
+      ChildSizing.Layout = cclLeftToRightThenTopToBottom
+      ChildSizing.ControlsPerLine = 1
+      ClientHeight = 96
+      ClientWidth = 183
+      ItemIndex = 0
+      Items.Strings = (
+        'Easy'
+        'Normal'
+        'Hard'
+      )
+      TabOrder = 0
     end
   end
   object Button1: TButton
