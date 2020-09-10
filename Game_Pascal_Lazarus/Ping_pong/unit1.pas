@@ -55,6 +55,7 @@ end;
 procedure TForm1.Timer1Timer(Sender: TObject);
 var
   Overlay:TRect;
+  RandomNumber:integer;
 begin
   PosX:=PosX + VelX;
   PosY:=PosY + VelY;
@@ -72,8 +73,8 @@ begin
   Shape1.Top:=round(Posy);
   if InterSectRect(Overlay, Shape2.BoundsRect, Shape1.BoundsRect) then
   begin
-    VelX:=-VelX - Random(5);
-    VelY:=-VelY - Random(5);
+       VelX:=-VelX - Random(5);
+       VelY:=-VelY - Random(5);
   end;
   if (Shape1.Left <= 0) then
      begin
