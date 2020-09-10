@@ -1,0 +1,96 @@
+object Form1: TForm1
+  Left = 404
+  Height = 300
+  Top = 199
+  Width = 619
+  Caption = 'Function'
+  ClientHeight = 300
+  ClientWidth = 619
+  Font.Style = [fsBold, fsItalic]
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    Left = 21
+    Height = 15
+    Top = 24
+    Width = 91
+    AutoSize = False
+    Caption = 'Input the A:'
+    Font.Color = 436433
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Edit1: TEdit
+    Left = 112
+    Height = 36
+    Top = 16
+    Width = 80
+    Font.Style = [fsBold, fsItalic]
+    NumbersOnly = True
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Left = 24
+    Height = 15
+    Top = 64
+    Width = 20
+    AutoSize = False
+    Caption = 'N:'
+    Font.Color = 436433
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label3: TLabel
+    Left = 60
+    Height = 15
+    Top = 64
+    Width = 56
+    AutoSize = False
+    ParentColor = False
+  end
+  object Memo1: TMemo
+    Left = 231
+    Height = 264
+    Top = 16
+    Width = 361
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 24
+    Height = 41
+    Top = 95
+    Width = 128
+    Caption = 'Calc'
+    Font.Color = 15658587
+    Font.Style = [fsBold, fsItalic]
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 24
+    Height = 41
+    Top = 192
+    Width = 128
+    Caption = 'Clear'
+    Font.Color = 15658587
+    Font.Style = [fsBold, fsItalic]
+    OnClick = Button2Click
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Button3: TButton
+    Left = 24
+    Height = 40
+    Top = 144
+    Width = 128
+    Caption = 'Author'
+    Font.Color = 15658587
+    Font.Style = [fsBold, fsItalic]
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 4
+  end
+end
