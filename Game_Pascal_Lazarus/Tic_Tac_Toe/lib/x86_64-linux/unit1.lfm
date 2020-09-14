@@ -1,10 +1,10 @@
 object Form1: TForm1
-  Left = 519
-  Height = 469
-  Top = 162
+  Left = 532
+  Height = 534
+  Top = 122
   Width = 446
   Caption = 'Tic-Tac-Toe'
-  ClientHeight = 469
+  ClientHeight = 534
   ClientWidth = 446
   OnCreate = FormCreate
   LCLVersion = '2.0.6.0'
@@ -800,5 +800,18 @@ object Form1: TForm1
     Width = 88
     OnClick = Image2Click
     Stretch = True
+  end
+  object Label1: TLabel
+    Left = 24
+    Height = 25
+    Top = 487
+    Width = 376
+    AutoSize = False
+    Caption = 'Creaty by Liashenko Rostyslav PSK-18'
+    Font.Height = -19
+    Font.Name = 'Comic Sans MS'
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
   end
 end
