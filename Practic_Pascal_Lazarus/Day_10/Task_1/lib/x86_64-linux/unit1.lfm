@@ -1,0 +1,57 @@
+object Form1: TForm1
+  Left = 469
+  Height = 441
+  Top = 180
+  Width = 631
+  Caption = 'Calc'
+  ClientHeight = 441
+  ClientWidth = 631
+  LCLVersion = '2.0.6.0'
+  object Button1: TButton
+    Left = 24
+    Height = 49
+    Top = 376
+    Width = 104
+    Caption = 'Calc'
+    Font.Color = 14610192
+    Font.Style = [fsBold, fsItalic]
+    OnClick = Button1Click
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Button2: TButton
+    Left = 256
+    Height = 49
+    Top = 376
+    Width = 104
+    Caption = 'Clear'
+    Font.Color = 14610192
+    Font.Style = [fsBold, fsItalic]
+    OnClick = Button2Click
+    ParentFont = False
+    TabOrder = 1
+  end
+  object Button3: TButton
+    Left = 504
+    Height = 49
+    Top = 376
+    Width = 104
+    Caption = 'Author'
+    Font.Color = 14610192
+    Font.Style = [fsBold, fsItalic]
+    OnClick = Button3Click
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Memo1: TMemo
+    Left = 24
+    Height = 360
+    Top = 8
+    Width = 584
+    Font.Color = 1085936
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    ScrollBars = ssVertical
+    TabOrder = 3
+  end
+end
