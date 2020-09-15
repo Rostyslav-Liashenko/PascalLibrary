@@ -1,0 +1,370 @@
+object Form1: TForm1
+  Left = 101
+  Height = 601
+  Top = 160
+  Width = 1256
+  Caption = 'Oraganization'
+  ClientHeight = 601
+  ClientWidth = 1256
+  Font.Color = 13421582
+  Font.Style = [fsBold, fsItalic]
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '2.0.6.0'
+  object Memo1: TMemo
+    Left = 568
+    Height = 227
+    Top = 56
+    Width = 376
+    Font.Color = 44543
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 0
+  end
+  object Label1: TLabel
+    Left = 96
+    Height = 15
+    Top = 16
+    Width = 48
+    Caption = 'Income'
+    Font.Color = 13421582
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label2: TLabel
+    Left = 384
+    Height = 23
+    Top = 16
+    Width = 70
+    AutoSize = False
+    Caption = 'Spending'
+    Font.Color = 13421582
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 40
+    Top = 296
+    Width = 512
+    Caption = 'Add information'
+    OnClick = Button1Click
+    TabOrder = 1
+  end
+  object Label4: TLabel
+    Left = 728
+    Height = 15
+    Top = 16
+    Width = 39
+    Caption = 'Profit'
+    Font.Color = 13421582
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Memo2: TMemo
+    Left = 272
+    Height = 224
+    Top = 56
+    Width = 256
+    Font.Color = 44543
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 2
+  end
+  object Memo3: TMemo
+    Left = 16
+    Height = 224
+    Top = 56
+    Width = 224
+    Font.Color = 44543
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 3
+  end
+  object Panel1: TPanel
+    Left = 1
+    Height = 26
+    Top = 360
+    Width = 954
+    Color = clYellow
+    ParentColor = False
+    TabOrder = 4
+  end
+  object Label3: TLabel
+    Left = 16
+    Height = 24
+    Top = 408
+    Width = 71
+    AutoSize = False
+    Caption = 'All profits:'
+    Font.Color = 13421582
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label5: TLabel
+    Left = 104
+    Height = 24
+    Top = 408
+    Width = 120
+    AutoSize = False
+    Font.Color = 44543
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button2: TButton
+    Left = 16
+    Height = 46
+    Top = 447
+    Width = 203
+    Caption = 'Suma Profit'
+    OnClick = Button2Click
+    TabOrder = 5
+  end
+  object Panel2: TPanel
+    Left = 252
+    Height = 328
+    Top = 384
+    Width = 38
+    Color = clMaroon
+    ParentColor = False
+    TabOrder = 6
+  end
+  object Label6: TLabel
+    Left = 304
+    Height = 15
+    Top = 400
+    Width = 109
+    Caption = 'Input the period'
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 433
+    Height = 36
+    Top = 392
+    Width = 80
+    Font.Color = 44543
+    Font.Style = [fsBold, fsItalic]
+    ParentFont = False
+    TabOrder = 7
+  end
+  object Label7: TLabel
+    Left = 304
+    Height = 23
+    Top = 448
+    Width = 152
+    AutoSize = False
+    Caption = 'Profit for then period'
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 464
+    Height = 24
+    Top = 447
+    Width = 84
+    AutoSize = False
+    ParentColor = False
+  end
+  object Label9: TLabel
+    Left = 304
+    Height = 15
+    Top = 487
+    Width = 45
+    AutoSize = False
+    Caption = 'Years:'
+    ParentColor = False
+  end
+  object Label10: TLabel
+    Left = 359
+    Height = 15
+    Top = 488
+    Width = 53
+    AutoSize = False
+    ParentColor = False
+  end
+  object Button3: TButton
+    Left = 304
+    Height = 40
+    Top = 520
+    Width = 120
+    Caption = 'Calc'
+    OnClick = Button3Click
+    TabOrder = 8
+  end
+  object Button4: TButton
+    Left = 16
+    Height = 43
+    Top = 520
+    Width = 203
+    Caption = 'Clear'
+    OnClick = Button4Click
+    TabOrder = 9
+  end
+  object Button5: TButton
+    Left = 448
+    Height = 38
+    Top = 520
+    Width = 104
+    Caption = 'Clear'
+    OnClick = Button5Click
+    TabOrder = 10
+  end
+  object Panel3: TPanel
+    Left = 560
+    Height = 328
+    Top = 384
+    Width = 43
+    Color = clMaroon
+    ParentColor = False
+    TabOrder = 11
+  end
+  object Label11: TLabel
+    Left = 616
+    Height = 24
+    Top = 400
+    Width = 192
+    AutoSize = False
+    Caption = 'Year of maximum spending'
+    Font.Color = 13421582
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Label12: TLabel
+    Left = 824
+    Height = 15
+    Top = 400
+    Width = 64
+    AutoSize = False
+    Font.Color = 44543
+    Font.Style = [fsBold, fsItalic]
+    ParentColor = False
+    ParentFont = False
+  end
+  object Button6: TButton
+    Left = 616
+    Height = 38
+    Top = 520
+    Width = 112
+    Caption = 'Calc'
+    OnClick = Button6Click
+    TabOrder = 12
+  end
+  object Button7: TButton
+    Left = 800
+    Height = 38
+    Top = 520
+    Width = 120
+    Caption = 'Clear'
+    OnClick = Button7Click
+    TabOrder = 13
+  end
+  object Label13: TLabel
+    Left = 616
+    Height = 16
+    Top = 432
+    Width = 144
+    AutoSize = False
+    Caption = 'Maximum Spending'
+    ParentColor = False
+  end
+  object Label14: TLabel
+    Left = 776
+    Height = 15
+    Top = 432
+    Width = 53
+    AutoSize = False
+    ParentColor = False
+  end
+  object Panel4: TPanel
+    Left = 600
+    Height = 30
+    Top = 568
+    Width = 352
+    Color = clYellow
+    ParentColor = False
+    TabOrder = 14
+  end
+  object Button8: TButton
+    Left = 568
+    Height = 40
+    Top = 296
+    Width = 376
+    Caption = 'Clear Text Box'
+    OnClick = Button8Click
+    TabOrder = 15
+  end
+  object Button9: TButton
+    Left = 1008
+    Height = 40
+    Top = 336
+    Width = 216
+    Caption = 'Clear Data'
+    OnClick = Button9Click
+    TabOrder = 16
+  end
+  object Panel5: TPanel
+    Left = 952
+    Height = 712
+    Top = 0
+    Width = 44
+    Color = clMaroon
+    ParentColor = False
+    TabOrder = 17
+  end
+  object Memo4: TMemo
+    Left = 1008
+    Height = 203
+    Top = 56
+    Width = 216
+    TabOrder = 18
+  end
+  object Button10: TButton
+    Left = 1008
+    Height = 48
+    Top = 272
+    Width = 216
+    Caption = 'Refresh and print'
+    OnClick = Button10Click
+    TabOrder = 19
+  end
+  object Panel6: TPanel
+    Left = 288
+    Height = 30
+    Top = 568
+    Width = 272
+    Color = clYellow
+    ParentColor = False
+    TabOrder = 20
+  end
+  object Panel7: TPanel
+    Left = 1
+    Height = 30
+    Top = 568
+    Width = 255
+    Color = clYellow
+    ParentColor = False
+    TabOrder = 21
+  end
+  object Button11: TButton
+    Left = 1008
+    Height = 37
+    Top = 392
+    Width = 216
+    Caption = 'Author'
+    OnClick = Button11Click
+    TabOrder = 22
+  end
+  object Label15: TLabel
+    Left = 1064
+    Height = 15
+    Top = 19
+    Width = 91
+    Caption = 'Current Data'
+    ParentColor = False
+  end
+end
