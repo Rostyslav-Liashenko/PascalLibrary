@@ -1,12 +1,13 @@
 object Form1: TForm1
-  Left = 491
-  Height = 629
-  Top = 58
-  Width = 674
+  Left = 90
+  Height = 687
+  Top = 73
+  Width = 1276
   Caption = 'Finance organization'
-  ClientHeight = 629
-  ClientWidth = 674
+  ClientHeight = 687
+  ClientWidth = 1276
   OnCreate = FormCreate
+  Position = poScreenCenter
   LCLVersion = '2.0.6.0'
   object Label1: TLabel
     Left = 32
@@ -73,19 +74,19 @@ object Form1: TForm1
     TabOrder = 3
   end
   object Button1: TButton
-    Left = 552
-    Height = 31
-    Top = 589
-    Width = 107
+    Left = 720
+    Height = 50
+    Top = 624
+    Width = 176
     Caption = 'Author'
     OnClick = Button1Click
     TabOrder = 4
   end
   object Button2: TButton
-    Left = 20
-    Height = 32
-    Top = 589
-    Width = 108
+    Left = 9
+    Height = 53
+    Top = 616
+    Width = 156
     Caption = 'Clear All'
     OnClick = Button2Click
     TabOrder = 5
@@ -170,10 +171,10 @@ object Form1: TForm1
     TabOrder = 10
   end
   object Panel1: TPanel
-    Left = 1
+    Left = 0
     Height = 16
     Top = 319
-    Width = 687
+    Width = 954
     Color = 571374
     ParentColor = False
     TabOrder = 11
@@ -221,7 +222,7 @@ object Form1: TForm1
   object Panel2: TPanel
     Left = 176
     Height = 233
-    Top = 335
+    Top = 336
     Width = 26
     Color = 6427368
     ParentColor = False
@@ -267,9 +268,195 @@ object Form1: TForm1
     Left = 0
     Height = 16
     Top = 568
-    Width = 687
+    Width = 1296
     Color = 571374
     ParentColor = False
     TabOrder = 19
+  end
+  object Panel6: TPanel
+    Left = 672
+    Height = 233
+    Top = 336
+    Width = 26
+    Color = 6427368
+    ParentColor = False
+    TabOrder = 20
+  end
+  object Button12: TButton
+    Left = 728
+    Height = 40
+    Top = 520
+    Width = 153
+    Caption = 'Remove Year'
+    OnClick = Button12Click
+    TabOrder = 21
+  end
+  object Panel7: TPanel
+    Left = 672
+    Height = 321
+    Top = 0
+    Width = 26
+    Color = 6427368
+    ParentColor = False
+    TabOrder = 22
+  end
+  object Label12: TLabel
+    Left = 711
+    Height = 24
+    Top = 16
+    Width = 73
+    AutoSize = False
+    Caption = 'Add year'
+    ParentColor = False
+  end
+  object Memo4: TMemo
+    Left = 711
+    Height = 87
+    Top = 45
+    Width = 207
+    TabOrder = 23
+  end
+  object Label13: TLabel
+    Left = 711
+    Height = 15
+    Top = 148
+    Width = 70
+    Caption = 'Add Profit'
+    ParentColor = False
+  end
+  object Memo5: TMemo
+    Left = 711
+    Height = 76
+    Top = 186
+    Width = 207
+    TabOrder = 24
+  end
+  object Button13: TButton
+    Left = 736
+    Height = 35
+    Top = 275
+    Width = 164
+    Caption = 'Add information'
+    OnClick = Button13Click
+    TabOrder = 25
+  end
+  object Memo6: TMemo
+    Left = 704
+    Height = 85
+    Top = 352
+    Width = 72
+    ScrollBars = ssVertical
+    TabOrder = 26
+  end
+  object Memo7: TMemo
+    Left = 830
+    Height = 84
+    Top = 354
+    Width = 88
+    ScrollBars = ssVertical
+    TabOrder = 27
+  end
+  object Button14: TButton
+    Left = 728
+    Height = 33
+    Top = 472
+    Width = 150
+    Caption = 'Refresh'
+    OnClick = Button14Click
+    TabOrder = 28
+  end
+  object Panel8: TPanel
+    Left = 928
+    Height = 329
+    Top = -11
+    Width = 26
+    Color = 6427368
+    ParentColor = False
+    TabOrder = 29
+  end
+  object Panel9: TPanel
+    Left = 928
+    Height = 234
+    Top = 335
+    Width = 26
+    Color = 6427368
+    ParentColor = False
+    TabOrder = 30
+  end
+  object Button15: TButton
+    Left = 992
+    Height = 39
+    Top = 56
+    Width = 213
+    Caption = 'Swap'
+    OnClick = Button15Click
+    TabOrder = 31
+  end
+  object Label14: TLabel
+    Left = 992
+    Height = 24
+    Top = 16
+    Width = 192
+    AutoSize = False
+    Caption = 'Swap first and last Element'
+    ParentColor = False
+  end
+  object Label15: TLabel
+    Left = 992
+    Height = 24
+    Top = 112
+    Width = 128
+    AutoSize = False
+    Caption = 'Year for spending:'
+    ParentColor = False
+  end
+  object Label16: TLabel
+    Left = 1136
+    Height = 15
+    Top = 112
+    Width = 80
+    AutoSize = False
+    ParentColor = False
+  end
+  object Button16: TButton
+    Left = 992
+    Height = 45
+    Top = 152
+    Width = 213
+    Caption = 'Find'
+    OnClick = Button16Click
+    TabOrder = 32
+  end
+  object Label17: TLabel
+    Left = 992
+    Height = 15
+    Top = 234
+    Width = 29
+    AutoSize = False
+    Caption = 'Sort'
+    ParentColor = False
+  end
+  object Memo8: TMemo
+    Left = 992
+    Height = 120
+    Top = 256
+    Width = 271
+    TabOrder = 33
+  end
+  object Memo9: TMemo
+    Left = 992
+    Height = 120
+    Top = 399
+    Width = 271
+    TabOrder = 34
+  end
+  object Button17: TButton
+    Left = 1056
+    Height = 37
+    Top = 525
+    Width = 180
+    Caption = 'Print'
+    OnClick = Button17Click
+    TabOrder = 35
   end
 end
