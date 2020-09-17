@@ -1,0 +1,163 @@
+object Form1: TForm1
+  Left = 483
+  Height = 644
+  Top = 69
+  Width = 479
+  Caption = 'Matrix'
+  ClientHeight = 644
+  ClientWidth = 479
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 15
+    Top = 16
+    Width = 205
+    Caption = 'Input the count row and count: '
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 240
+    Height = 36
+    Top = 8
+    Width = 80
+    TabOrder = 0
+  end
+  object StringGrid1: TStringGrid
+    Left = 16
+    Height = 256
+    Top = 56
+    Width = 452
+    ColCount = 100
+    FixedCols = 0
+    FixedRows = 0
+    RowCount = 100
+    TabOrder = 1
+  end
+  object Button1: TButton
+    Left = 16
+    Height = 49
+    Top = 328
+    Width = 152
+    Caption = 'Calc'
+    OnClick = Button1Click
+    TabOrder = 2
+  end
+  object Label2: TLabel
+    Left = 16
+    Height = 24
+    Top = 392
+    Width = 288
+    AutoSize = False
+    Caption = 'The product of main diagonal elements:'
+    ParentColor = False
+  end
+  object Label3: TLabel
+    Left = 344
+    Height = 23
+    Top = 392
+    Width = 88
+    AutoSize = False
+    ParentColor = False
+  end
+  object Label4: TLabel
+    Left = 16
+    Height = 22
+    Top = 464
+    Width = 197
+    AutoSize = False
+    Caption = 'The coutn negative elements: '
+    ParentColor = False
+  end
+  object Label5: TLabel
+    Left = 232
+    Height = 22
+    Top = 464
+    Width = 56
+    AutoSize = False
+    ParentColor = False
+  end
+  object Button2: TButton
+    Left = 312
+    Height = 49
+    Top = 328
+    Width = 152
+    Caption = 'Generate'
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object Label6: TLabel
+    Left = 16
+    Height = 28
+    Top = 427
+    Width = 272
+    AutoSize = False
+    Caption = 'The product of other diagonal elements: '
+    ParentColor = False
+  end
+  object Label7: TLabel
+    Left = 344
+    Height = 23
+    Top = 432
+    Width = 88
+    AutoSize = False
+    ParentColor = False
+  end
+  object Label8: TLabel
+    Left = 16
+    Height = 15
+    Top = 504
+    Width = 32
+    AutoSize = False
+    Caption = 'x1:'
+    ParentColor = False
+  end
+  object Edit2: TEdit
+    Left = 64
+    Height = 36
+    Top = 496
+    Width = 80
+    TabOrder = 4
+  end
+  object Label9: TLabel
+    Left = 16
+    Height = 15
+    Top = 576
+    Width = 32
+    AutoSize = False
+    Caption = 'x2:'
+    ParentColor = False
+  end
+  object Edit3: TEdit
+    Left = 64
+    Height = 36
+    Top = 568
+    Width = 80
+    TabOrder = 5
+  end
+  object Label10: TLabel
+    Left = 192
+    Height = 24
+    Top = 496
+    Width = 271
+    AutoSize = False
+    Caption = 'Average product element for conditions'
+    ParentColor = False
+  end
+  object Label11: TLabel
+    Left = 248
+    Height = 24
+    Top = 528
+    Width = 136
+    AutoSize = False
+    ParentColor = False
+  end
+  object Button3: TButton
+    Left = 232
+    Height = 53
+    Top = 568
+    Width = 174
+    Caption = 'Calc Average'
+    OnClick = Button3Click
+    TabOrder = 6
+  end
+end

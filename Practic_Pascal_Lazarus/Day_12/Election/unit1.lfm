@@ -1,0 +1,215 @@
+object Form1: TForm1
+  Left = 179
+  Height = 706
+  Top = 28
+  Width = 1029
+  Caption = 'Election'
+  ClientHeight = 706
+  ClientWidth = 1029
+  LCLVersion = '2.0.6.0'
+  object Label1: TLabel
+    Left = 24
+    Height = 24
+    Top = 16
+    Width = 155
+    AutoSize = False
+    Caption = 'Input the count place: '
+    ParentColor = False
+  end
+  object Edit1: TEdit
+    Left = 176
+    Height = 36
+    Top = 8
+    Width = 80
+    TabOrder = 0
+  end
+  object Label2: TLabel
+    Left = 344
+    Height = 24
+    Top = 16
+    Width = 184
+    AutoSize = False
+    Caption = 'Input the count candidate: '
+    ParentColor = False
+  end
+  object Edit2: TEdit
+    Left = 544
+    Height = 36
+    Top = 8
+    Width = 80
+    TabOrder = 1
+  end
+  object StringGrid1: TStringGrid
+    Left = 24
+    Height = 292
+    Top = 64
+    Width = 600
+    ColCount = 100
+    DefaultColWidth = 90
+    FixedCols = 0
+    FixedRows = 0
+    RowCount = 100
+    TabOrder = 2
+  end
+  object Button1: TButton
+    Left = 448
+    Height = 48
+    Top = 376
+    Width = 175
+    Caption = 'Random Generate'
+    OnClick = Button1Click
+    TabOrder = 3
+  end
+  object Button2: TButton
+    Left = 24
+    Height = 53
+    Top = 376
+    Width = 153
+    Caption = 'Prepare'
+    OnClick = Button2Click
+    TabOrder = 4
+  end
+  object Memo1: TMemo
+    Left = 24
+    Height = 77
+    Top = 456
+    Width = 339
+    ScrollBars = ssVertical
+    TabOrder = 5
+  end
+  object Button3: TButton
+    Left = 456
+    Height = 37
+    Top = 456
+    Width = 165
+    Caption = 'Find lose candidate'
+    OnClick = Button3Click
+    TabOrder = 6
+  end
+  object Label3: TLabel
+    Left = 24
+    Height = 16
+    Top = 563
+    Width = 320
+    AutoSize = False
+    Caption = 'Input the numebr place for find max Candidate: '
+    ParentColor = False
+  end
+  object Edit3: TEdit
+    Left = 352
+    Height = 36
+    Top = 555
+    Width = 80
+    TabOrder = 7
+  end
+  object Label4: TLabel
+    Left = 24
+    Height = 23
+    Top = 595
+    Width = 208
+    AutoSize = False
+    ParentColor = False
+  end
+  object Panel1: TPanel
+    Left = -1
+    Height = 16
+    Top = 432
+    Width = 651
+    Color = 57855
+    ParentColor = False
+    TabOrder = 8
+  end
+  object Button4: TButton
+    Left = 24
+    Height = 40
+    Top = 632
+    Width = 104
+    Caption = 'find'
+    OnClick = Button4Click
+    TabOrder = 9
+  end
+  object Panel2: TPanel
+    Left = -1
+    Height = 16
+    Top = 536
+    Width = 651
+    Color = 57855
+    ParentColor = False
+    TabOrder = 10
+  end
+  object Button5: TButton
+    Left = 200
+    Height = 40
+    Top = 632
+    Width = 85
+    Caption = 'Clear'
+    OnClick = Button5Click
+    TabOrder = 11
+  end
+  object Panel3: TPanel
+    Left = 648
+    Height = 648
+    Top = 2
+    Width = 19
+    Color = 723927
+    ParentColor = False
+    TabOrder = 12
+  end
+  object Label5: TLabel
+    Left = 816
+    Height = 24
+    Top = 8
+    Width = 56
+    AutoSize = False
+    Caption = 'Rating'
+    ParentColor = False
+  end
+  object Memo2: TMemo
+    Left = 694
+    Height = 154
+    Top = 40
+    Width = 295
+    TabOrder = 13
+  end
+  object Button6: TButton
+    Left = 736
+    Height = 54
+    Top = 392
+    Width = 201
+    Caption = 'Sort'
+    OnClick = Button6Click
+    TabOrder = 14
+  end
+  object Memo3: TMemo
+    Left = 696
+    Height = 106
+    Top = 264
+    Width = 295
+    TabOrder = 15
+  end
+  object Label6: TLabel
+    Left = 696
+    Height = 24
+    Top = 216
+    Width = 167
+    AutoSize = False
+    Caption = 'Input the minimal rating: '
+    ParentColor = False
+  end
+  object Edit4: TEdit
+    Left = 872
+    Height = 36
+    Top = 208
+    Width = 80
+    TabOrder = 16
+  end
+  object Button7: TButton
+    Left = 458
+    Height = 29
+    Top = 496
+    Width = 163
+    Caption = 'clear'
+    OnClick = Button7Click
+    TabOrder = 17
+  end
+end
